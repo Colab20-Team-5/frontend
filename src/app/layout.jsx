@@ -1,4 +1,5 @@
 import "./globals.css";
+import Navbar from "./components/Navbar";
 
 export const metadata = {
   title: "FitM8",
@@ -8,7 +9,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="mb-10">
+        <div className="w-11/12 mx-auto my-4">{children}</div>
+        <Navbar />
+      </body>
     </html>
   );
 }
