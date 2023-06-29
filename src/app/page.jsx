@@ -1,25 +1,15 @@
 import dayjs from "dayjs";
-import Image from "next/image";
 import HomeNavButton from "./components/HomeNavButton";
+import Header from "./components/Header";
 
 export default function Home() {
   return (
     <>
-      <header className="flex justify-between items-center">
-        <div>
-          <h1 className="text-2xl">Welcome, Fódla!</h1>
-          <p className="text-sm">Ready for today’s workout?</p>
-        </div>
-        <div>
-          <Image
-            src="/user.png"
-            alt="user avatar logo"
-            width={70}
-            height={70}
-          />
-        </div>
-      </header>
-
+      <Header
+        isHomePage={true}
+        headerText={"Welcome Sazed!"}
+        paraText={"Ready for today’s workout?"}
+      />
       <div className="font-medium text-lg mt-8 mb-10">
         {dayjs().format("dddd, MMMM DD")}.
       </div>
