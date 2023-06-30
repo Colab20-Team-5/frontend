@@ -35,3 +35,26 @@ $line-height-sm: 1.4;
 $line-height-md: 1.6;
 $line-height-lg: 1.8;
 $line-height-xl: 2.0;
+
+// Font Sizes
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+$font-size-xxl: 24px;
+
+// Heading Sizes
+$h1-font-size: $font-size-xxl;
+$h2-font-size: $font-size-xl;
+$h3-font-size: $font-size-lg;
+$h4-font-size: $font-size-md;
+$h5-font-size: $font-size-sm;
+$h6-font-size: $font-size-xs;
+
+// Font Weights
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
