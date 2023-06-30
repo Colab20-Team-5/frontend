@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
 import PageButton from "../components/PageButton";
-import '../../stylesheet/base/application.scss';
 
 const page = () => {
   return (
