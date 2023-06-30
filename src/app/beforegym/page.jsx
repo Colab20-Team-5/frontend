@@ -11,12 +11,6 @@ const page = () => {
       />
 
       <div className="h-[70vh] flex items-center justify-center testing">
-        <h1>Before heading</h1>
-        <ul>
-          <li>Hallowe</li>
-          <li>Hallowe</li>
-          <li>Hallowe</li>
-        </ul>
         <div className="w-full">
           <PageButton url={"/beforegym/workoutplan"} text={"Plan My Workout"} />
           <PageButton url={"/beforegym/maptogym"} text={"Map to the Gym"} />
