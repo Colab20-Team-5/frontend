@@ -3,7 +3,7 @@ import React from "react";
 
 const Header = ({ isHomePage, headerText, paraText }) => {
   return (
-    <header className="flex justify-between items-center">
+    <header className="header">
       <div>
         <h1 className="text-2xl">{headerText}</h1>
         <p className="text-sm">{paraText}</p>
