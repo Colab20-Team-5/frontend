@@ -5,8 +5,8 @@ const Header = ({ isHomePage, headerText, paraText }) => {
   return (
     <header className="header">
       <div>
-        <h1 className="text-2xl">{headerText}</h1>
-        <p className="text-sm">{paraText}</p>
+        <h1 className="heading-primary">{headerText}</h1>
+        <p className="paragraph">{paraText}</p>
       </div>
       {isHomePage && (
         <div>
