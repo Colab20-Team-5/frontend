@@ -5,7 +5,7 @@
     &:visited {
         display: inline-block;
         border: none;
-        border-radius: $border-radius-lg;
+        border-radius: $border-radius-md;
         cursor: pointer;
         text-decoration: none;
         padding: $spacing-sm $spacing-md;
@@ -24,11 +24,11 @@
         .img-container {
             display: flex;
             align-items: center;
-            justify-content: flex-start;
-            width: 100%;
+            justify-content: space-between;
+            width: 80%;
 
             img {
-                margin: $margin-sm $margin-lg;
+                margin: $margin-xs $margin-lg;
             }
 
             p {
