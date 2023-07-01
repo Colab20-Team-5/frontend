@@ -1,0 +1,22 @@
+
+.nav {
+    display: flex;
+    position:fixed;
+    justify-content: space-between;
+    width: 100%;
+    background-color:#404040;
+    padding: $padding-sm $padding-md $padding-xl;
+    text-transform: capitalize;
+    bottom: 0;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 30%;
+        height: $spacing-xs;
+        background-color: #fff;
+        bottom: 0;
+        transform: translate(12rem, -$spacing-md);
+        border-radius: $border-radius-sm;
+    }
+}
