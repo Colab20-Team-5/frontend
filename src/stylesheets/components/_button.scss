@@ -20,6 +20,9 @@
         background-color: $default-bg;
         margin: $margin-sm 0;
         text-transform: capitalize;
+        font-size: $font-size-md;
+        font-weight: $font-weight-medium;
+        justify-content: center;
 
         .img-container {
             display: flex;
