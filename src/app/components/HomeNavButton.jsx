@@ -6,7 +6,7 @@ const HomeNavButton = ({ text, url }) => {
   return (
     <Link
       href={url}
-      className="btn btn--home-nav"
+      className="btn btn--nav"
     >
       <div className="img-container">
         <Image
@@ -15,7 +15,7 @@ const HomeNavButton = ({ text, url }) => {
           width={60}
           height={60}
         />
-        <p>{text}</p>
+        <p className="paragraph">{text}</p>
       </div>
     </Link>
   );

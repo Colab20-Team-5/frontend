@@ -1,0 +1,41 @@
+
+.btn {
+  
+    &:link,
+    &:visited {
+        display: inline-block;
+        border: none;
+        border-radius: $border-radius-lg;
+        cursor: pointer;
+        text-decoration: none;
+        padding: $spacing-sm $spacing-md;
+        transition: all .2s;
+        position: relative;
+        font-size: $font-size-sm;
+    }
+
+    &--nav {
+        display: flex;
+        width: 100%;
+        background-color: $default-bg;
+        margin: $margin-sm 0;
+        text-transform: capitalize;
+
+        .img-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+
+            img {
+                margin: $margin-sm $margin-lg;
+            }
+
+            p {
+                color: $color-text;
+                font-size: $font-size-md;
+                font-weight: $font-weight-bold;
+            }
+        }
+    }
+}
