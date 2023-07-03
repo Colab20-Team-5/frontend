@@ -10,9 +10,7 @@ export default function Home() {
         headerText={"Welcome Sazed!"}
         paraText={"Ready for today’s workout?"}
       />
-      <div className="font-medium text-lg mt-8 mb-10 date">
-        {dayjs().format("dddd, MMMM DD")}.
-      </div>
+      <div className="date">{dayjs().format("dddd, MMMM DD")}.</div>
 
       <div>
         <HomeNavButton text={"Before the Gym"} url={"/beforegym"} />
