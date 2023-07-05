@@ -18,5 +18,19 @@
         left: $spacing-xl;
         text-align: left;
         transform: translateY(-50%);
+
+        h1 {
+            font-size: $font-size-xxl;
+            font-weight: $font-weight-extra-bold;
+            margin-bottom: $margin-sm;
+            letter-spacing: $letter-spacing-md;
+        }
+
+        p {
+            font-size: $font-size-sm;
+            margin-bottom: $margin-md;
+            letter-spacing: $letter-spacing-md;
+            line-height: $line-height-sm;
+        }
     }
 }

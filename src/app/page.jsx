@@ -16,7 +16,7 @@ export default function Home() {
             <h1 className="heading-primary">Unleash your fitness potential</h1>
             <p className="paragraph">Get motivated plan your workouts,
                 and crush your fitness goals with us</p>
-            <PageButton text={"learn more"} url={"/beforegym"}/>
+            <button className="btn btn--primary btn--white">Learn more</button>
           </div>
         </section>
         <AboutCard />
