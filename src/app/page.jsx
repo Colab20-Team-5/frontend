@@ -1,11 +1,11 @@
 import dayjs from "dayjs";
 import HomeNavButton from "./components/HomeNavButton";
-import Header from "./components/Header";
+import HeaderImg from "./components/HeaderImg";
 
 export default function Home() {
   return (
     <>
-      <Header
+      <HeaderImg
         isHomePage={true}
         headerText={"Welcome Sazed!"}
         paraText={"Ready for today’s workout?"}

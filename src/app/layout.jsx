@@ -1,9 +1,8 @@
-
-import '../stylesheets/app.scss';
+import "../stylesheets/app.scss";
 import Navbar from "./components/Navbar";
 
 export const metadata = {
-  title: "FitM8",
+  title: "BeFit",
   description: "",
 };
 
@@ -11,8 +10,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="">
-        <div className="container">{children}</div>
         <Navbar />
+        <div>{children}</div>
       </body>
     </html>
   );

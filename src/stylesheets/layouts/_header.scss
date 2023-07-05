@@ -1,5 +1,17 @@
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.header-img {
+  .imgstyle {
+    object-fit: cover;
+    position: relative !important;
+  }
+}
+
+.header-text {
+  h1 {
+    font-size: $h1-font-size;
+    font-weight: $font-weight-bold;
+  }
+
+  p {
+    margin: $margin-md 0;
+  }
 }
