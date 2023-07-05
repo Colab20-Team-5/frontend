@@ -7,15 +7,13 @@ const Footer = () => {
     <footer className="footer">
         
         <div className="logo-col">
-            <Link href="/" classNameName="footer-logo">
-                    <Image src="/home.svg" alt="home nav icon" width={25} height={25} />
-                    </Link>
+    
             <p>Your personalized fitness journey, empowering you
                  to achieve your fitness goals</p>
         </div>
         <nav className="nav-col">
-            <p className="footer-heading">Company</p>
-            <ul className="footer-nav">
+            <p>Company</p>
+            <ul>
                 <li><a className="footer-links" href="#">About Us</a></li>
                 <li><a className="footer-links" href="#">Tems and conditions</a></li>
                 <li><a className="footer-links" href="#">Privacy Policy</a></li>
@@ -23,32 +21,30 @@ const Footer = () => {
             </ul>
         </nav>
         <nav className="nav-col">
-            <p className="footer-heading">Find us on</p>
+            <p>Find us on</p>
             <ul className="footer-nav">
             <li>
-                     <Link href="/" classNameName="footer-logo">
-                    <Image src="/home.svg" alt="home nav icon" width={25} height={25} />
-                    </Link>
+                <Link href="/" classNameName="footer-logo">
+                <Image src="/home.svg" alt="home nav icon" width={25} height={25} />
+                </Link>
             </li>
             <li> 
-                    <Link href="/" classNameName="footer-logo">
-                    <Image src="/home.svg" alt="home nav icon" width={25} height={25} />
-                    </Link>
+            
             </li>
             <li> 
-                    <Link href="/" classNameName="footer-logo">
-                    <Image src="/home.svg" alt="home nav icon" width={25} height={25} />
-                    </Link>
+            <Link href="/" classNameName="footer-logo">
+                <Image src="/home.svg" alt="home nav icon" width={25} height={25} />
+                </Link>
             </li>
             <li> 
-                    <Link href="/" classNameName="footer-logo">
-                    <Image src="/home.svg" alt="home nav icon" width={25} height={25} />
-                    </Link>
+            <Link href="/" classNameName="footer-logo">
+                <Image src="/home.svg" alt="home nav icon" width={25} height={25} />
+                </Link>
             </li>
             <li> 
-                    <Link href="/" classNameName="footer-logo">
-                    <Image src="/home.svg" alt="home nav icon" width={25} height={25} />
-                    </Link>
+            <Link href="/" classNameName="footer-logo">
+                <Image src="/home.svg" alt="home nav icon" width={25} height={25} />
+                </Link>
             </li>
             </ul>
         </nav>
