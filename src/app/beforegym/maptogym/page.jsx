@@ -1,4 +1,5 @@
 "use client";
+import PageButton from "../../components/PageButton";
 import { GoogleMap, useLoadScript } from "@react-google-maps/api";
 import React, { useMemo } from "react";
 
@@ -24,6 +25,16 @@ const Page = () => {
           center={center}
           zoom={10}
         />
+      )}
+
+      {isLoaded && (
+        <div className="continue-btn">
+          <PageButton
+            text={"Guided Audio Workout"}
+            url={"/beforegym/guidedaudio"}
+            arrow={"/nextarrow.svg"}
+          />
+        </div>
       )}
     </div>
   );

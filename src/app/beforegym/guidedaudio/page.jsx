@@ -1,55 +1,37 @@
-import Image from "next/image";
+import PageButton from "@/app/components/PageButton";
+import HeaderText from "../../components/HeaderText";
 import React from "react";
 
 const page = () => {
-  return <div className="audio">
-    <div className="audio__header">
-      <Image
-        src="/back-svgrepo-com.svg"
-        alt="Back arrow"
-        width={40}
-        height={40}
+  return (
+    <div className="audio">
+      <HeaderText
+        headerText={"Journey to the Gym"}
+        secondHeader={"Guided Audio Workout"}
+        paraText={
+          "Get motivated and listen to expertly guided instruction on your workout on your way to the gym."
+        }
       />
-      <h3>Guided Audio Workout</h3>
-      <Image
-        src="/play-1001-svgrepo-com.svg"
-        alt="Play arrow big"
-        width={80}
-        height={80}
-      />
-    </div>
-    <div className="audio__controls">
-      <audio controls>
-      <source src="h" type="audio/mpeg" />
+      <div className="audio-header">
+        <p>5 July 2023</p>
+        <h3>Pre-Workout Guide</h3>
+        <p>Motivational Workout</p>
+      </div>
+      <div className="audio-player">
+        <audio controls>
+          <source src="/audio.mp3" type="audio/mp3" />
+        </audio>
+      </div>
 
-      </audio>
-      <Image
-        src="/previous-svgrepo-com.svg"
-        alt="Prev svg"
-        width={40}
-        height={40}
-      />
-       <Image
-        src="/play-1001-svgrepo-com.svg"
-        alt="Prev svg"
-        width={40}
-        height={40}
-      />
-      <Image
-        src="/pause-1010-svgrepo-com.svg"
-        alt="Prev svg"
-        width={40}
-        height={40}
-      />
-       <Image
-        src="/next-svgrepo-com.svg"
-        alt="Prev svg"
-        width={40}
-        height={40}
-      />
+      <div className="continue-btn">
+        <PageButton
+          text={"Listen to Music"}
+          url={"/beforegym/listentomusic"}
+          arrow={"/nextarrow.svg"}
+        />
+      </div>
     </div>
-    <input type="range" />
-  </div>;
+  );
 };
 
 export default page;
