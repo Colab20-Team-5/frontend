@@ -14,10 +14,17 @@
         margin: $margin-xl;
     }
 
+    &__text-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     h3 {
         font-size: $font-size-lg;
         font-weight: $font-weight-bold;
         margin-bottom: $margin-md;
+        text-align: left;
     }
 
     p {

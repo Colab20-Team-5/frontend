@@ -24,8 +24,10 @@ const AboutCard = () => {
                           alt="home nav icon"
                           width={100} height={100} />
                       
-                        <h3>{title}</h3>
-                        <p>{description}</p>
+                        <div className="card__text-box">
+                          <h3>{title}</h3>
+                          <p>{description}</p>
+                        </div>
                         <Link
                           href={'/gympage'}
                           className="btn btn--primary btn--dark"
