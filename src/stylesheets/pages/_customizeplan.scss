@@ -1,0 +1,15 @@
+.customize-plan-container {
+  margin: $margin-xl auto;
+  font-size: $font-size-md;
+
+  .day {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.1rem $padding-md;
+    background-color: $color-background-card;
+    margin: $margin-md auto;
+    font-weight: $font-weight-bold;
+    border-radius: $border-radius-sm;
+    cursor: pointer;
+  }
+}
