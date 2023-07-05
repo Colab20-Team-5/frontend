@@ -10,7 +10,7 @@ export default function Home() {
             <p className="paragraph">Get motivated plan your workouts,
                 and crush your fitness goals with us</p>
     <Link
-      href={'/'}
+      href={'/beforegym'}
       className="btn btn--primary btn--white btn--sm"
     >
       Learn more
