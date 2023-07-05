@@ -1,6 +1,7 @@
 import dayjs from "dayjs";
 import HomeNavButton from "./components/HomeNavButton";
 import Header from "./components/Header";
+import PageButton from "./components/PageButton";
 
 export default function Home() {
   return (
@@ -10,10 +11,12 @@ export default function Home() {
         headerText={"BeFit"}
       />
       <div>
-        <HomeNavButton text={"Before the Gym"} url={"/beforegym"} />
-        <HomeNavButton text={"At the Gym"} url={"/atgym"} />
-        <HomeNavButton text={"After the Gym"} url={"/aftergym"} />
-        <HomeNavButton text={"My Goals"} url={"/goals"} />
+        <section className="section-hero">
+          <h2>Unleash your fitness potential</h2>
+          <p>Get motivated plan your workouts,
+              and crush your fitness goals with us</p>
+          <PageButton text={"learn more"} url={"/beforegym"}/>
+        </section>
       </div>
     </>
   );
