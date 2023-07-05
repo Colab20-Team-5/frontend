@@ -1,4 +1,4 @@
-// import "./globals.css";
+
 import '../stylesheets/app.scss';
 import Navbar from "./components/Navbar";
 
