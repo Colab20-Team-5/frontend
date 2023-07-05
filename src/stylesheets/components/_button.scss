@@ -3,30 +3,21 @@
   
     &:link,
     &:visited {
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: $padding-lg $padding-lg;
         display: inline-block;
-        border-radius: 100px;
+        border: none;
+        border-radius: $border-radius-md;
+        cursor: pointer;
+        text-decoration: none;
+        padding: $spacing-md;
         transition: all .2s;
         position: relative;
-        font-size: $font-size-sm;
-        border: none;
-        cursor: pointer;
+        font-size: $font-size-lg;
     }
 
-    &--white {
-        background-color: #fff;
-        color: $color-text;
-    }
-
-    &--dark {
-        background-color: $color-secondary-dark;
-        color: $color-text-light;
-    }
-
+  
     &--primary {
         display: flex;
+        background-color: $default-bg;
         margin: $margin-sm 0;
         text-transform: capitalize;
         font-size: $font-size-md;
@@ -50,4 +41,10 @@
             }
         }
     }
+
+    &--white {
+        background-color: #fff;
+        color: #000;
+    }
+    
 }

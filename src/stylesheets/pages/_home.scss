@@ -13,16 +13,16 @@
 
     &__text-box {
         position: absolute;
-        bottom: $spacing-xl;
+        bottom: $spacing-xxl;
         padding: $padding-md;
         left: $spacing-xl;
         text-align: left;
-        transform: translateY(-50%);
+        transform: translateY(-20%);
 
         h1 {
             font-size: $font-size-xxl;
             font-weight: $font-weight-extra-bold;
-            margin-bottom: $margin-sm;
+            margin-bottom: $margin-xl;
             letter-spacing: $letter-spacing-md;
         }
 

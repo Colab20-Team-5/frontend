@@ -6,7 +6,7 @@ const HomeNavButton = ({ text, url }) => {
   return (
     <Link
       href={url}
-      className="btn btn--nav"
+      className="btn btn--primary btn--white"
     >
       <div className="img-container">
         <Image
