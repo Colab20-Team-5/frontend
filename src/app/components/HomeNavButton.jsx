@@ -4,7 +4,9 @@ import React from "react";
 const HomeNavButton = ({ text, url }) => {
   return (
     <Link href={url} className="btn btn--nav">
-      <p className="paragraph">{text}</p>
+      <div>
+        <button className="btn btn--nav">{text}</button>
+      </div>
     </Link>
   );
 };
