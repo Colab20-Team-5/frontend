@@ -43,8 +43,13 @@
     }
 
     &--white {
-        background-color: #fff;
+        background-color: $bg-white;
         color: #000;
+    }
+
+    &--dark {
+        background-color: $bg-black;
+        color: #fff;
     }
     
 }
