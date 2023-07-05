@@ -1,4 +1,5 @@
 import React from 'react'
+import cardDetails from '../constants';
 
 const AboutCard = () => {
   return (
@@ -9,12 +10,16 @@ const AboutCard = () => {
             empowering you to achieve your fitness goals with a tailor-made
              workout plan and seamless tracking on the go.</p>
 {
-    cardDetails
+    cardDetails.map(({im, title, description}) => {
+        return (
+            <>
+                <h2>{title}</h2>
+                <p>{description}</p>
+            </>
+        )
+    })
 }
-             <div className="card">
-
-             </div>
-
+            
         </section>
     </>
   )
