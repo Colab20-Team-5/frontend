@@ -7,12 +7,12 @@ const Footer = () => {
     <footer className="footer">
         
         <div className="nav-col">
-            <h2>BeFit</h2>
+            <h3>BeFit</h3>
             <p>Your personalized fitness journey, empowering you
                  to achieve your fitness goals</p>
         </div>
         <nav className="nav-col">
-            <h2>Company</h2>
+            <h3>Company</h3>
             <ul>
                 <li><a className="footer-links" href="#">About Us</a></li>
                 <li><a className="footer-links" href="#">Tems and conditions</a></li>
@@ -21,7 +21,7 @@ const Footer = () => {
             </ul>
         </nav>
         <nav className="nav-col">
-            <h2>Find us on</h2>
+            <h3>Find us on</h3>
             <ul className="socials">
             <li>
                 <Link href="/" classNameName="footer-logo">
