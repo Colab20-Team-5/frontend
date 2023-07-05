@@ -23,29 +23,29 @@ const Footer = () => {
         <nav className="nav-col">
             <h3>Find us on</h3>
             <ul className="socials">
-            <li>
+                <li>
+                    <Link href="/" classNameName="footer-logo">
+                    <Image src="/fb.svg" alt="home nav icon" width={25} height={25} />
+                    </Link>
+                </li>
+                <li> 
+                
+                </li>
+                <li> 
                 <Link href="/" classNameName="footer-logo">
-                <Image src="/fb.svg" alt="home nav icon" width={25} height={25} />
-                </Link>
-            </li>
-            <li> 
-            
-            </li>
-            <li> 
-            <Link href="/" classNameName="footer-logo">
-                <Image src="/apple.svg" alt="home nav icon" width={25} height={25} />
-                </Link>
-            </li>
-            <li> 
-            <Link href="/" classNameName="footer-logo">
-                <Image src="/mdi_instagram.svg" alt="home nav icon" width={25} height={25} />
-                </Link>
-            </li>
-            <li> 
-            <Link href="/" classNameName="footer-logo">
-                <Image src="/bxl_play-store.svg" alt="home nav icon" width={25} height={25} />
-                </Link>
-            </li>
+                    <Image src="/apple.svg" alt="home nav icon" width={25} height={25} />
+                    </Link>
+                </li>
+                <li> 
+                <Link href="/" classNameName="footer-logo">
+                    <Image src="/mdi_instagram.svg" alt="home nav icon" width={25} height={25} />
+                    </Link>
+                </li>
+                <li> 
+                <Link href="/" classNameName="footer-logo">
+                    <Image src="/bxl_play-store.svg" alt="home nav icon" width={25} height={25} />
+                    </Link>
+                </li>
             </ul>
         </nav>
    </footer>
