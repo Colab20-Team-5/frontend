@@ -25,7 +25,7 @@ const Footer = () => {
             <ul className="socials">
             <li>
                 <Link href="/" classNameName="footer-logo">
-                <Image src="/home.svg" alt="home nav icon" width={25} height={25} />
+                <Image src="/fb.svg" alt="home nav icon" width={25} height={25} />
                 </Link>
             </li>
             <li> 
@@ -33,17 +33,17 @@ const Footer = () => {
             </li>
             <li> 
             <Link href="/" classNameName="footer-logo">
-                <Image src="/home.svg" alt="home nav icon" width={25} height={25} />
+                <Image src="/apple.svg" alt="home nav icon" width={25} height={25} />
                 </Link>
             </li>
             <li> 
             <Link href="/" classNameName="footer-logo">
-                <Image src="/home.svg" alt="home nav icon" width={25} height={25} />
+                <Image src="/mdi_instagram.svg" alt="home nav icon" width={25} height={25} />
                 </Link>
             </li>
             <li> 
             <Link href="/" classNameName="footer-logo">
-                <Image src="/home.svg" alt="home nav icon" width={25} height={25} />
+                <Image src="/bxl_play-store.svg" alt="home nav icon" width={25} height={25} />
                 </Link>
             </li>
             </ul>
