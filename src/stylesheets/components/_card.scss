@@ -13,4 +13,17 @@
         border-radius: $border-radius-md;
         margin: $margin-xl;
     }
+
+    h3 {
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bold;
+        margin-bottom: $margin-md;
+    }
+
+    p {
+        font-size: $font-size-sm;
+        margin-bottom: $margin-md;
+        letter-spacing: $letter-spacing-md;
+        line-height: $line-height-sm;
+    }
 }

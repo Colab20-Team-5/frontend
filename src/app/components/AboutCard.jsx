@@ -24,7 +24,7 @@ const AboutCard = () => {
                           alt="home nav icon"
                           width={100} height={100} />
                       
-                        <h2>{title}</h2>
+                        <h3>{title}</h3>
                         <p>{description}</p>
                         <Link
                           href={'/gympage'}
