@@ -17,6 +17,9 @@ const AboutCard = () => {
             return (
                 <>
                     <div className="card">
+                    <Image src="/setting.svg"
+                    alt="home nav icon"
+                    width={25} height={25} />
                       <h2>{title}</h2>
                       <p>{description}</p>
                     </div>
