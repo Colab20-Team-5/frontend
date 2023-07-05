@@ -7,13 +7,8 @@ export default function Home() {
     <>
       <Header
         isHomePage={true}
-        headerText={"Welcome Sazed!"}
-        paraText={"Ready for today’s workout?"}
+        headerText={"BeFit"}
       />
-      <div className="font-medium text-lg mt-8 mb-10 date">
-        {dayjs().format("dddd, MMMM DD")}.
-      </div>
-
       <div>
         <HomeNavButton text={"Before the Gym"} url={"/beforegym"} />
         <HomeNavButton text={"At the Gym"} url={"/atgym"} />
