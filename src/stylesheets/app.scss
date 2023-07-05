@@ -1,12 +1,11 @@
-@import './base/base';
-@import './layouts/header';
-@import './abstructs/variables';
-@import './base/typography';
+@import "./base/base";
+@import "./layouts/header";
+@import "./abstructs/variables";
+@import "./base/typography";
 
+@import "./pages/home";
+@import "./pages/music";
 
-@import './pages/home';
-@import './pages/music';
-
-
-@import './components/button';
-@import './components/nav';
+@import "./components/button";
+@import "./components/nav";
+@import "./components/question";

@@ -1,6 +1,4 @@
-import dayjs from "dayjs";
 import HomeNavButton from "./components/HomeNavButton";
-import HeaderImg from "./components/HeaderImg";
 
 export default function Home() {
   return (

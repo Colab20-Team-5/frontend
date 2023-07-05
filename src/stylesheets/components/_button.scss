@@ -14,6 +14,7 @@
   width: 75%;
   margin: $margin-sm auto;
   justify-content: center;
+  align-items: center;
 
   &:link,
   &:visited {
@@ -27,4 +28,10 @@
     position: relative;
     font-size: $font-size-sm;
   }
+}
+
+.continue-btn {
+  width: 70%;
+  display: flex;
+  margin-left: auto;
 }
