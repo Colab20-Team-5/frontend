@@ -4,7 +4,10 @@
     margin: $margin-md $margin-sm;
 }
 
-.section-about {
+.section-hero {
     margin: $margin-md $margin-sm;
-    height: 90vh;
+    height: 70vh;
+    background-image: linear-gradient(to bottom, $color-primary-dark, $color-primary), url(../../../public/gym.jpg);
+    background-size: cover;
+    background-position: center;
 }

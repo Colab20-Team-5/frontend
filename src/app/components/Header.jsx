@@ -4,7 +4,7 @@ import React from "react";
 const Header = ({ isHomePage, headerText, paraText }) => {
   return (
     <header className="header">
-       <Image
+          <Image
           src="/menu-svgrepo-com.svg"
           alt={`link to page`}
           width={30}

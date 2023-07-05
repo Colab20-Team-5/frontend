@@ -12,10 +12,12 @@ export default function Home() {
         headerText={"BeFit"}
       />
         <section className="section-hero">
-          <h2>Unleash your fitness potential</h2>
-          <p>Get motivated plan your workouts,
-              and crush your fitness goals with us</p>
-          <PageButton text={"learn more"} url={"/beforegym"}/>
+          <div className="hero-text">
+            <h1 className="heading-primary">Unleash your fitness potential</h1>
+            <p className="paragraph">Get motivated plan your workouts,
+                and crush your fitness goals with us</p>
+            <PageButton text={"learn more"} url={"/beforegym"}/>
+          </div>
         </section>
         <AboutCard />
     </>

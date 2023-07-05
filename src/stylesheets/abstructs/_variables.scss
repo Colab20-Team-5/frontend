@@ -41,7 +41,7 @@ $font-size-sm: 1.4rem;
 $font-size-md: 1.6rem;
 $font-size-lg: 1.8rem;
 $font-size-xl: 2.0rem;
-$font-size-xxl: 2.4rem;
+$font-size-xxl: 3.2rem;
 
 // Heading Sizes
 $h1-font-size: $font-size-xxl;
@@ -59,9 +59,9 @@ $font-weight-bold: 700;
 $font-weight-extra-bold: 800;
 
 // Primary Colors
-$color-primary: #007bff;
-$color-primary-dark: #0056b3;
-$color-primary-light: #66baff;
+$color-primary: rgba(26, 26, 26, 0.103);
+$color-primary-dark: rgba(0, 0, 0, 0.181);
+// $color-primary-light: #66baff;
 
 // Secondary Colors
 $color-secondary: #6c757d;
