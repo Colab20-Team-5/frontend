@@ -1,5 +1,6 @@
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.header-img {
+  .imgstyle {
+    object-fit: cover;
+    position: relative !important;
+  }
 }

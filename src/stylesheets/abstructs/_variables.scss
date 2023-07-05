@@ -1,4 +1,4 @@
-$font-family: 'Inter', 'Roboto', sans-serif;
+$font-family: "Roboto", sans-serif;
 
 // Spacing
 $spacing-xs: 0.4rem;
@@ -35,14 +35,14 @@ $line-height-xs: 1.1;
 $line-height-sm: 1.4;
 $line-height-md: 1.6;
 $line-height-lg: 1.8;
-$line-height-xl: 2.0;
+$line-height-xl: 2;
 
 // Font Sizes
 $font-size-xs: 1.2rem;
 $font-size-sm: 1.4rem;
 $font-size-md: 1.6rem;
 $font-size-lg: 1.8rem;
-$font-size-xl: 2.0rem;
+$font-size-xl: 2rem;
 $font-size-xxl: 2.4rem;
 
 // Heading Sizes
@@ -61,26 +61,26 @@ $font-weight-bold: 700;
 $font-weight-extra-bold: 800;
 
 // Primary Colors
-$color-primary: #1a1a1a1a;
-$color-primary-dark: #0000002e;
+// $color-primary: #007bff;
+// $color-primary-dark: #0056b3;
 // $color-primary-light: #66baff;
 
 // Secondary Colors
-$color-secondary: #6c757d;
-$color-secondary-dark: #343a40;
-$color-secondary-light: #adb5bd;
-$color-white: #ffffff;
+// $color-secondary: #6c757d;
+// $color-secondary-dark: #343a40;
+// $color-secondary-light: #adb5bd;
 
 // Background Colors
-$bg-white: #ffffff;
-$bg-black: #000000;
-$default-bg: #D9D9D9;
-$card-bg: #e3e2ee ;
+$color-background-card: rgba(201, 197, 222, 0.51);
+$color-background-button: #000;
+$color-background-option: #f6f6f6;
+$default-bg: #ffffff;
 
 // Text Colors
-$color-text: #333333;
+$color-default: #000000;
 $color-text-light: #ffffff;
 $color-text-muted: #6c757d;
+$color-text-audio: #1e88e5;
 
 // Small border radius (used for buttons, inputs, etc.)
 $border-radius-sm: 4px;

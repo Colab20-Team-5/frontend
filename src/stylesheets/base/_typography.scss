@@ -1,4 +1,5 @@
 .heading-primary {
+<<<<<<< HEAD
     font-size: $h1-font-size;
     font-weight: $font-weight-bold;
     line-height: $line-height-xs;
@@ -14,4 +15,27 @@
     letter-spacing: 0.5px;
     margin-bottom: $margin-xs;
     color: #fff;
+=======
+  font-size: $h1-font-size;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  margin-bottom: $margin-sm;
+}
+
+.heading-secondary {
+  font-size: $h3-font-size;
+  font-weight: $font-weight-regular;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  margin-bottom: $margin-md;
+}
+
+.paragraph {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-regular;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  margin-bottom: $margin-md;
+>>>>>>> dev_midpoint
 }
