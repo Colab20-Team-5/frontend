@@ -36,5 +36,21 @@
                 }
             }
         }
+
+        .socials {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: $margin-md;
+
+            a {
+                color: $default-bg;
+                font-size: $font-size-sm;
+                font-weight: $font-weight-regular;
+                letter-spacing: $letter-spacing-sm;
+                line-height: $line-height-sm;
+                text-decoration: none;
+            }
+        }
     }
 }

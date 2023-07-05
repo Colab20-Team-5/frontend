@@ -28,7 +28,7 @@ const AboutCard = () => {
                           <p>{description}</p>
                         </div>
                         <Link
-                          href={'/gympage'}
+                          href={'/beforegym'}
                           className="btn btn--sm"
                         >
                           Learn more

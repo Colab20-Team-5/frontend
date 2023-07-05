@@ -22,7 +22,7 @@ const Footer = () => {
         </nav>
         <nav className="nav-col">
             <h2>Find us on</h2>
-            <ul className="footer-nav">
+            <ul className="socials">
             <li>
                 <Link href="/" classNameName="footer-logo">
                 <Image src="/home.svg" alt="home nav icon" width={25} height={25} />
