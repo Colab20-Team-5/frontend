@@ -1,5 +1,7 @@
 import React from 'react'
 import cardDetails from '../constants';
+import Image from 'next/image';
+import PageButton from './PageButton';
 
 const AboutCard = () => {
   return (
@@ -17,11 +19,13 @@ const AboutCard = () => {
             return (
                 <>
                     <div className="card">
-                    <Image src="/setting.svg"
+                    <Image src={im}
                     alt="home nav icon"
-                    width={25} height={25} />
+                    width={100} height={100} />
+                    
                       <h2>{title}</h2>
                       <p>{description}</p>
+                      <button className="btn btn--primary btn--white">Learn more</button>
                     </div>
                 </>
             )

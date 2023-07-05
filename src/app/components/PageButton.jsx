@@ -3,9 +3,9 @@ import React from "react";
 
 const PageButton = ({ text, url }) => {
   return (
-    <Link href={url} className="btn btn--nav">
+    <Link href={url} className="btn btn--primary">
       <div className="">
-        <button className="btn btn--nav">{text}</button>
+        <button className="btn btn--primary">{text}</button>
       </div>
     </Link>
   );

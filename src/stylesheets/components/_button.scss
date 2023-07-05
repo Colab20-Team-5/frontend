@@ -14,9 +14,18 @@
         font-size: $font-size-sm;
     }
 
-    &--nav {
+    &--white {
+        background-color: #fff;
+        color: $color-text;
+    }
+
+    &--dark {
+        background-color: $color-secondary-dark;
+        color: $color-text-light;
+    }
+
+    &--primary {
         display: flex;
-        background-color: $default-bg;
         margin: $margin-sm 0;
         text-transform: capitalize;
         font-size: $font-size-md;
