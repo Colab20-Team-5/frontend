@@ -21,5 +21,19 @@
             letter-spacing: $letter-spacing-sm;
             line-height: $line-height-sm;
         }
+
+        ul {
+            li {
+                margin-bottom: $margin-sm;
+                a {
+                    color: $default-bg;
+                    font-size: $font-size-sm;
+                    font-weight: $font-weight-regular;
+                    letter-spacing: $letter-spacing-sm;
+                    line-height: $line-height-sm;
+                    text-decoration: none;
+                }
+            }
+        }
     }
 }
