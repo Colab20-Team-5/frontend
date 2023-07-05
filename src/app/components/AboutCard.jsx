@@ -29,7 +29,7 @@ const AboutCard = () => {
                         </div>
                         <Link
                           href={'/gympage'}
-                          className="btn btn--primary btn--dark"
+                          className="btn btn--sm"
                         >
                           Learn more
                         </Link>
