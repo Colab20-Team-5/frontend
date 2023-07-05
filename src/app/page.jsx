@@ -11,7 +11,7 @@ export default function Home() {
                 and crush your fitness goals with us</p>
     <Link
       href={'/'}
-      className="btn btn--primary btn--white"
+      className="btn btn--primary btn--white btn--sm"
     >
       Learn more
     </Link>

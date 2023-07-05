@@ -1,13 +1,13 @@
 .footer {
-    background-color: $bg-black;
+    background-color: $color-default;
 
     .nav-col {
         padding: $padding-sm $padding-md;
         text-align: left;
-        border-right: 1px solid $color-secondary-dark;
+
 
         h2 {
-            color: $color-white;
+            color: $default-bg;
             font-size: $h2-font-size;
             font-weight: $font-weight-bold;
             letter-spacing: $letter-spacing-md;
@@ -15,7 +15,7 @@
         }
 
         p {
-            color: $color-white;
+            color: $default-bg;
             font-size: $font-size-sm;
             font-weight: $font-weight-regular;
             letter-spacing: $letter-spacing-sm;

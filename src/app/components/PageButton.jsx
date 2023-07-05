@@ -4,7 +4,7 @@ import React from "react";
 
 const PageButton = ({ text, url, arrow }) => {
   return (
-    <Link href={url} className="btn btn--primary btn--white">
+    <Link href={url} className="btn btn--lg">
       <div className="">
         <button
           className="btn btn--nav"

@@ -1,7 +1,6 @@
 import React from 'react'
 import cardDetails from '../constants';
 import Image from 'next/image';
-import PageButton from './PageButton';
 import Link from 'next/link';
 
 const AboutCard = () => {
