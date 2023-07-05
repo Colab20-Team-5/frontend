@@ -6,13 +6,13 @@ const Footer = () => {
   return (
     <footer className="footer">
         
-        <div className="logo-col">
-    
+        <div className="nav-col">
+            <h2>BeFit</h2>
             <p>Your personalized fitness journey, empowering you
                  to achieve your fitness goals</p>
         </div>
         <nav className="nav-col">
-            <p>Company</p>
+            <h2>Company</h2>
             <ul>
                 <li><a className="footer-links" href="#">About Us</a></li>
                 <li><a className="footer-links" href="#">Tems and conditions</a></li>
@@ -21,7 +21,7 @@ const Footer = () => {
             </ul>
         </nav>
         <nav className="nav-col">
-            <p>Find us on</p>
+            <h2>Find us on</h2>
             <ul className="footer-nav">
             <li>
                 <Link href="/" classNameName="footer-logo">
