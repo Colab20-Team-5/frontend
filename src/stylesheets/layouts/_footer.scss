@@ -8,8 +8,8 @@
     background: var(--neutral-800, #191D23);
 
     .nav-col {
-        // padding: $padding-sm $padding-md;
-        // text-align: left;
+        padding: $padding-sm $padding-md;
+        text-align: left;
 
 
         h3 {
@@ -34,7 +34,7 @@
             align-items: flex-start;
             gap: $spacing-sm;
             align-self: stretch;
-            
+
             li {
                 color: $color-text-light;
                 font-size: $font-size-sm;
@@ -53,8 +53,9 @@
 
         .socials {
             display: flex;
+            flex-direction: row;
             justify-content: flex-start;
-            gap: 16px;
+            gap: $spacing-sm;
             align-items: center;
             margin-top: $margin-md;
 
