@@ -12,7 +12,7 @@ export default function Home() {
         headerText={"BeFit"}
       />
         <section className="section-hero">
-          <div className="hero-text">
+          <div className="section-hero__text-box">
             <h1 className="heading-primary">Unleash your fitness potential</h1>
             <p className="paragraph">Get motivated plan your workouts,
                 and crush your fitness goals with us</p>

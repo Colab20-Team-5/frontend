@@ -10,4 +10,13 @@
     background-image: linear-gradient(to bottom, $color-primary-dark, $color-primary), url(../../../public/gym.jpg);
     background-size: cover;
     background-position: center;
+
+    &__text-box {
+        position: absolute;
+        bottom: $spacing-xl;
+        padding: $padding-md;
+        left: $spacing-xl;
+        text-align: left;
+        transform: translateY(-50%);
+    }
 }
