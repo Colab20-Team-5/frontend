@@ -1,11 +1,13 @@
 @import './base/base';
-@import './layouts/header';
 @import './abstructs/variables';
 @import './base/typography';
 
 
 @import './pages/home';
 @import './pages/music';
+
+@import './layouts/about';
+@import './layouts/header';
 
 
 @import './components/button';
