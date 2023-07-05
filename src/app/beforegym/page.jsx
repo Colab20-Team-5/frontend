@@ -7,6 +7,7 @@ const page = () => {
     <div>
       <HeaderText
         headerText={"Journey to the Gym"}
+        secondHeader={""}
         paraText={
           "Congrats Alex on taking the initiative to plan your journey to the gym. Let’s get started!"
         }

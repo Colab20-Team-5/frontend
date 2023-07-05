@@ -5,14 +5,7 @@ import HeaderImg from "./components/HeaderImg";
 export default function Home() {
   return (
     <>
-      <HeaderImg
-        isHomePage={true}
-        headerText={"Welcome Sazed!"}
-        paraText={"Ready for today’s workout?"}
-      />
-      <div className="date">{dayjs().format("dddd, MMMM DD")}.</div>
-
-      <div>
+      <div className="btn-container">
         <HomeNavButton text={"Before the Gym"} url={"/beforegym"} />
         <HomeNavButton text={"At the Gym"} url={"/atgym"} />
         <HomeNavButton text={"After the Gym"} url={"/aftergym"} />

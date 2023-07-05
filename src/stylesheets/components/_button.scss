@@ -5,12 +5,12 @@
 }
 
 .btn {
+  display: flex;
   color: $color-text-light;
   font-size: $font-size-sm;
   font-weight: $font-weight-bold;
   background-color: $color-background-button;
   text-transform: capitalize;
-  display: flex;
   width: 75%;
   margin: $margin-sm auto;
   justify-content: center;
