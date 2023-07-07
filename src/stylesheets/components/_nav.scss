@@ -4,7 +4,8 @@
   align-items: center;
   justify-content: space-between;
 
-  p {
+  a {
     font-size: $font-size-xxl;
+    color: $color-default;
   }
 }

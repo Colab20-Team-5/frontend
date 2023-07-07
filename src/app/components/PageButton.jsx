@@ -4,16 +4,21 @@ import React from "react";
 
 const PageButton = ({ text, url, arrow }) => {
   return (
-    <Link href={url} className="btn btn--lg">
-      <div className="">
-        <button
-          className="btn btn--nav"
-          style={{ justifyContent: arrow ? "space-between" : "center" }}
-        >
-          {text}
-          {arrow && <Image src={arrow} width={20} height={20} alt="" />}
-        </button>
-      </div>
+    <Link
+      href={url}
+      className="btn btn"
+      style={{ width: arrow ? "fit-content" : "75%" }}
+    >
+      <button
+        className="btn btn--nav"
+        style={{
+          justifyContent: arrow ? "space-between" : "center",
+          width: arrow ? "fit-content" : "75%",
+        }}
+      >
+        {text}
+        {arrow && <Image src={arrow} width={20} height={20} alt="" />}
+      </button>
     </Link>
   );
 };
