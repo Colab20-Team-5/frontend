@@ -6,7 +6,7 @@ const PageButton = ({ text, url, arrow }) => {
   return (
     <Link
       href={url}
-      className="btn btn"
+      className="btn"
       style={{ width: arrow ? "fit-content" : "75%" }}
     >
       <button
