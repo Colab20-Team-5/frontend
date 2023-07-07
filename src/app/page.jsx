@@ -10,12 +10,12 @@ export default function Home() {
             <h1 className="heading-primary">Unleash your fitness potential</h1>
             <p className="paragraph">Get motivated plan your workouts,
                 and crush your fitness goals with us</p>
-    <Link
-      href={'/beforegym'}
-      className="btn btn--primary btn--white btn--sm"
-    >
-      Learn more
-    </Link>
+            <Link
+              href={'/beforegym'}
+              className="btn btn--primary btn--white btn--sm"
+            >
+              Learn more
+            </Link>
           </div>
         </section>
         <AboutCard />
