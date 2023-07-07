@@ -47,6 +47,7 @@ const Footer = () => {
                     </Link>
                 </li>
             </ul>
+            <p class="copyright">Copyright &copy; 2023-BeFit, specific moments captured</p>
         </nav>
    </footer>
   )
