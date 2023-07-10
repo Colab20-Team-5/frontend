@@ -1,4 +1,5 @@
 import "../stylesheets/app.scss";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
 export const metadata = {

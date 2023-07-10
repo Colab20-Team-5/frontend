@@ -1,0 +1,36 @@
+.card {
+    background-color: $color-background-card;
+    border-radius: $border-radius-md;
+    padding: $padding-md;
+    margin: $margin-xxl $margin-md;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        width: 50%;
+        height: 18rem;
+        border-radius: $border-radius-md;
+        margin: $margin-xl;
+    }
+
+    &__text-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    h3 {
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bold;
+        margin-bottom: $margin-md;
+        text-align: left;
+    }
+
+    p {
+        font-size: $font-size-sm;
+        margin-bottom: $margin-md;
+        letter-spacing: $letter-spacing-md;
+        line-height: $line-height-sm;
+    }
+}

@@ -1,4 +1,4 @@
-$font-family: "Roboto", sans-serif;
+$font-family: "Inter", "Roboto", sans-serif;
 
 // Spacing
 $spacing-xs: 0.4rem;
@@ -6,6 +6,7 @@ $spacing-sm: 0.8rem;
 $spacing-md: 1.6rem;
 $spacing-lg: 2.4rem;
 $spacing-xl: 3.2rem;
+$spacing-xxl: 4.0rem;
 
 // Margin
 $margin-xs: $spacing-xs;
@@ -13,6 +14,7 @@ $margin-sm: $spacing-sm;
 $margin-md: $spacing-md;
 $margin-lg: $spacing-lg;
 $margin-xl: $spacing-xl;
+$margin-xxl: $spacing-xxl;
 
 // Padding
 $padding-xs: $spacing-xs;
@@ -29,7 +31,7 @@ $letter-spacing-lg: 2px;
 $letter-spacing-xl: 3px;
 
 // Line Height
-$line-height-xs: 1.2;
+$line-height-xs: 1.1;
 $line-height-sm: 1.4;
 $line-height-md: 1.6;
 $line-height-lg: 1.8;
@@ -41,7 +43,7 @@ $font-size-sm: 1.4rem;
 $font-size-md: 1.6rem;
 $font-size-lg: 1.8rem;
 $font-size-xl: 2rem;
-$font-size-xxl: 2.4rem;
+$font-size-xxl: 4rem;
 
 // Heading Sizes
 $h1-font-size: $font-size-xxl;
@@ -73,6 +75,7 @@ $color-background-card: rgba(201, 197, 222, 0.51);
 $color-background-button: #000;
 $color-background-option: #f6f6f6;
 $default-bg: #ffffff;
+$neutral-800: rgba(25, 29, 35, 1);
 
 // Text Colors
 $color-default: #000000;
@@ -91,3 +94,12 @@ $border-radius-lg: 16px;
 
 // Circle border radius (used for avatars, circular elements, etc.)
 $border-radius-circle: 50%;
+
+//  box shadow variables
+$shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+$shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
