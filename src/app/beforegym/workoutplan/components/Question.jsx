@@ -1,7 +1,7 @@
 import React from "react";
 import Option from "./Option";
 
-const Question = ({ questionText, options }) => {
+const Question = ({ questionText, options, idx }) => {
   return (
     <div className="paragraph question">
       <p>{questionText}</p>
