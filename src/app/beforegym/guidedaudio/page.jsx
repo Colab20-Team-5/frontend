@@ -1,13 +1,21 @@
 'use client'
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import PageButton from "@/app/components/PageButton";
 import HeaderText from "../../components/HeaderText";
 import Image from "next/image";
 
 const page = () => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null);
   const handleClick = () => {
-    setIsPlaying(!isPlaying);
+    if (isPlaying) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    } else {
+      audioRef.current.play();
+      setIsPlaying(true);
+    }
+
   };
 
   return (
@@ -30,13 +38,13 @@ const page = () => {
           <div className="play-pause">
             
               { isPlaying ?  (<Image
-                src="/play-1001-svgrepo-com.svg"
+                src="/pause-1010-svgrepo-com.svg"
                 width={30}
                 height={30}
                 className="icon icon--2"
                 onClick = { handleClick } />) :
               (<Image
-                src="/pause-1010-svgrepo-com.svg"
+                src="/play-1001-svgrepo-com.svg"
                 width={30}
                 height={30}
                 className="icon icon--3"
@@ -47,9 +55,9 @@ const page = () => {
           <Image src="/next-svgrepo-com.svg" width={30} height={30} className="icon icon--4" />
           <input type="range" name="progress time" id="progress" className="icon icon--progress"/>
         </div>
-        {/* <audio controls>
+        <audio controls ref={audioRef} >
           <source src="/audio.mp3" type="audio/mp3" />
-        </audio> */}
+        </audio>
       </div>
 
       <div className="continue-btn">
