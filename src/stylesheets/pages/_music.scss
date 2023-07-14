@@ -20,5 +20,21 @@
 
   .audio-player {
     margin-top: $margin-xl;
+
+    &__icons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: $margin-md;
+      width: 100%;
+      padding: 0 8rem;
+      border: 2px solid red;
+
+      .icon {
+        font-size: $font-size-xxl;
+        color: $color-text-audio;
+        margin: 0 $margin-md;
+        cursor: pointer;
+      }
+    }
   }
 }
