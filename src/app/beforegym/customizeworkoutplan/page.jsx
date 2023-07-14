@@ -1,8 +1,23 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
 import HeaderText from "../../components/HeaderText";
 import PageButton from "@/app/components/PageButton";
+import { weekDays } from "@/data";
 
 const page = () => {
+
+  const [clickedDays, setClickedDays] = useState([]);
+
+  const handleClick = (dayId) => {
+    if (clickedDays.includes(dayId)) {
+      const newClickedDays = clickedDays.filter((id) => id !== dayId);
+      setClickedDays(newClickedDays);
+      return;
+    }
+
+    setClickedDays([...clickedDays, dayId]);
+  }
+
   return (
     <div>
       <HeaderText
@@ -12,10 +27,22 @@ const page = () => {
       />
 
       <div className="customize-plan-container">
-        <div className="day">
-          <p>Monday</p>
-          <button type="submit" >+</button>
-        </div>
+        {
+          weekDays.map(({ id, day }) => {
+            const isClicked = clickedDays.includes(id);
+            return (
+              <div className="day-container">
+                <div className="day" key={id}>
+                  <p>{day}</p>
+                  <button type="submit" onClick = { () => handleClick(id) }>
+                    {isClicked ? "-" : "+"}
+                  </button>
+                </div>
+                { ( isClicked && <textarea name="" id="" cols="30" rows="10"></textarea>)}
+              </div>
+            );
+          })
+        }
        
       </div>
 
