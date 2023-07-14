@@ -15,6 +15,19 @@
   }
 }
 
-.day-container {
+.main-container {
   position: relative;
+}
+
+.day-container {
+  background-color: $color-background-card;
+
+  button {
+    font-size: $font-size-lg;
+  }
+
+  textarea {
+    font-size: $font-size-lg;
+    outline: none;
+  }
 }

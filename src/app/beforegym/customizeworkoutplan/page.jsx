@@ -7,6 +7,8 @@ import { weekDays } from "@/data";
 const page = () => {
 
   const [clickedDays, setClickedDays] = useState([]);
+  const [text, setText] = useState("");
+
 
   const handleClick = (dayId) => {
     if (clickedDays.includes(dayId)) {
@@ -18,8 +20,28 @@ const page = () => {
     setClickedDays([...clickedDays, dayId]);
   }
 
+  const handleChange = (e) => {
+    setText(e.target.value);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log(text);
+  }
+
+  const handleKeyDown = (e) => {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+      setText(text + "\n");
+    }
+  }
+  
+
+
+
   return (
-    <div className="day-container">
+    <div className="main-container">
       <HeaderText
         headerText={"Journey to the Gym"}
         secondHeader={"Plan My Workout"}
@@ -40,7 +62,14 @@ const page = () => {
                 </div>
                 { ( isClicked && 
                   <form onSubmit = { handleSubmit }>
-                  <textarea name="" id="" cols="54" rows="10" />
+                  <textarea name=""
+                   id="" cols="53" 
+                   rows="10" 
+                   onChange = { handleChange }
+                  value = { text }
+                  onKeyDown={handleKeyDown}
+
+                    />
                   </form>
                 )}
               </div>
