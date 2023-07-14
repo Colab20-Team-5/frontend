@@ -38,7 +38,11 @@ const page = () => {
                     {isClicked ? "-" : "+"}
                   </button>
                 </div>
-                { ( isClicked && <textarea name="" id="" cols="30" rows="10"></textarea>)}
+                { ( isClicked && 
+                  <form onSubmit = { handleSubmit }>
+                  <textarea name="" id="" cols="54" rows="10" />
+                  </form>
+                )}
               </div>
             );
           })
