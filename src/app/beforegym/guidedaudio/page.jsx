@@ -20,7 +20,11 @@ const page = () => {
       </div>
       <div className="audio-player">
         <div className="audio-player--icons">
+          <Image src="/previous-svgrepo-com.svg" width={130} height={130} />
           <Image src="/play-1001-svgrepo-com.svg" width={130} height={130} />
+          <Image src="/pause-1010-svgrepo-com.svg" width={130} height={130} />
+          <Image src="/next-svgrepo-com.svg" width={130} height={130} />
+          <input type="range" name="" id="" />
         </div>
         <audio controls>
           <source src="/audio.mp3" type="audio/mp3" />
