@@ -19,7 +19,7 @@ const page = () => {
   }
 
   return (
-    <div>
+    <div className="day-container">
       <HeaderText
         headerText={"Journey to the Gym"}
         secondHeader={"Plan My Workout"}
