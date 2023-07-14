@@ -6,18 +6,28 @@ import Image from "next/image";
 
 const page = () => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [currTime, setCurrTime] = useState(0);
   const audioRef = useRef(null);
   const handleClick = () => {
     if (isPlaying) {
       audioRef.current.pause();
-      setIsPlaying(false);
     } else {
       audioRef.current.play();
-      setIsPlaying(true);
     }
-
+    setIsPlaying(!isPlaying);
   };
 
+  const handleTimeUpdate = () => {
+    const { currentTime, duration } = audioRef.current;
+    setCurrTime(currentTime);
+  };
+
+  const  handleProgressChange = (e) => {
+    const { duration } = audioRef.current;
+    const newTime = (e.target.value / 100) * duration;
+    setCurrTime(newTime);
+    audioRef.current.currentTime = newTime;
+  };
   return (
     <div className="audio">
       <HeaderText
@@ -53,9 +63,17 @@ const page = () => {
               }
           </div>
           <Image src="/next-svgrepo-com.svg" width={30} height={30} className="icon icon--4" />
-          <input type="range" name="progress time" id="progress" className="icon icon--progress"/>
+          <input type="range"
+          name="progress time"
+          id="progress"
+          className="icon icon--progress"
+          min={0}
+          max={100}
+          value= { (currTime / audioRef.current?.duration) * 100 || 0 }
+          onChange = { handleProgressChange }
+          />
         </div>
-        <audio controls ref={audioRef} >
+        <audio controls ref={audioRef} onTimeUpdate={handleTimeUpdate}>
           <source src="/audio.mp3" type="audio/mp3" />
         </audio>
       </div>
