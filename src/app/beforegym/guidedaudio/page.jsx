@@ -44,9 +44,8 @@ const page = () => {
               />)
             }
         </div>
-
           <Image src="/next-svgrepo-com.svg" width={30} height={30} className="icon icon--4" />
-          <input type="range" name="progress time" id="progress" className="icon icon--5"/>
+          <input type="range" name="progress time" id="progress" className="icon icon--progress"/>
         </div>
         {/* <audio controls>
           <source src="/audio.mp3" type="audio/mp3" />
