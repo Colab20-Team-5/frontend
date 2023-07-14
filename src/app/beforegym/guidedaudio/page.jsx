@@ -31,18 +31,18 @@ const page = () => {
             src="/play-1001-svgrepo-com.svg"
             width={100}
             height={100}
-            className="icon"
+            className="icon icon--play"
             onClick = { handleClick } />) :
           (<Image
             src="/pause-1010-svgrepo-com.svg"
             width={100}
             height={100}
-            className="icon"
+            className="icon icon--play"
             onClick = { handleClick }
             />)
           }
 
-          <Image src="/next-svgrepo-com.svg" width={60} height={60} />
+          <Image src="/next-svgrepo-com.svg" width={60} height={60} className="icon" />
           <input type="range" name="progress time" id="progress" />
         </div>
         <audio controls>

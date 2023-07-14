@@ -23,17 +23,23 @@
 
     &__icons {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-gap: $margin-md;
+      align-items: center;
+      justify-items: center;
       margin-bottom: $margin-md;
       width: 100%;
       padding: 0 8rem;
-      border: 2px solid red;
 
       .icon {
         font-size: $font-size-xxl;
         color: $color-text-audio;
         margin: 0 $margin-md;
         cursor: pointer;
+
+        &--play {
+          font-size: 2rem;
+        }
+
       }
     }
   }
