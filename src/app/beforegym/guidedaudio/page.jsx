@@ -49,14 +49,14 @@ const page = () => {
             
               { isPlaying ?  (<Image
                 src="/pause-1010-svgrepo-com.svg"
-                width={30}
-                height={30}
+                width={40}
+                height={40}
                 className="icon icon--2"
                 onClick = { handleClick } />) :
               (<Image
                 src="/play-1001-svgrepo-com.svg"
-                width={30}
-                height={30}
+                width={40}
+                height={40}
                 className="icon icon--3"
                 onClick = { handleClick }
                 />)

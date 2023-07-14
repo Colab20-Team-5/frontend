@@ -40,8 +40,8 @@
       .play-pause {
         border: 2px solid $color-text-audio;
         border-radius: 50%;
-        width: 10rem;
-        height: 10rem;
+        width: 16rem;
+        height: 16rem;
         grid-column: 1/4;
         grid-row: 1/2;
         display: flex;
@@ -85,6 +85,21 @@
             background: #ff9c06;
             border-radius: 50%;
             cursor: pointer;
+          }
+
+          &::-webkit-slider-thumb {
+            appearance: none;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: #ff9c06;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+
+          &::-moz-range-progress {
+            background-color: $color-text-audio;
+            height: 0.5rem;
+            border-radius: 0.5rem;
           }
         }
       }
