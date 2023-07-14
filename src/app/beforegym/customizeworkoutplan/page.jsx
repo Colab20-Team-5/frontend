@@ -14,20 +14,9 @@ const page = () => {
       <div className="customize-plan-container">
         <div className="day">
           <p>Monday</p>
-          <p>+</p>
+          <button type="submit" >+</button>
         </div>
-        <div className="day">
-          <p>Tuesday</p>
-          <p>+</p>
-        </div>
-        <div className="day">
-          <p>Thursday</p>
-          <p>+</p>
-        </div>
-        <div className="day">
-          <p>Friday</p>
-          <p>+</p>
-        </div>
+       
       </div>
 
       <div className="continue-btn">
