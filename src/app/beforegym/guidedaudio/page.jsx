@@ -26,28 +26,31 @@ const page = () => {
       </div>
       <div className="audio-player">
         <div className="audio-player__icons">
-          <Image src="/previous-svgrepo-com.svg" width={60} height={60} className="icon"/>
-          { isPlaying ?  (<Image
-            src="/play-1001-svgrepo-com.svg"
-            width={100}
-            height={100}
-            className="icon icon--play"
-            onClick = { handleClick } />) :
-          (<Image
-            src="/pause-1010-svgrepo-com.svg"
-            width={100}
-            height={100}
-            className="icon icon--play"
-            onClick = { handleClick }
-            />)
-          }
-
-          <Image src="/next-svgrepo-com.svg" width={60} height={60} className="icon" />
-          <input type="range" name="progress time" id="progress" />
+          <Image src="/previous-svgrepo-com.svg" width={30} height={30} className="icon icon--1"/>
+        <div className="play-pause">
+          
+            { isPlaying ?  (<Image
+              src="/play-1001-svgrepo-com.svg"
+              width={30}
+              height={30}
+              className="icon icon--2"
+              onClick = { handleClick } />) :
+            (<Image
+              src="/pause-1010-svgrepo-com.svg"
+              width={30}
+              height={30}
+              className="icon icon--3"
+              onClick = { handleClick }
+              />)
+            }
         </div>
-        <audio controls>
+
+          <Image src="/next-svgrepo-com.svg" width={30} height={30} className="icon icon--4" />
+          <input type="range" name="progress time" id="progress" className="icon icon--5"/>
+        </div>
+        {/* <audio controls>
           <source src="/audio.mp3" type="audio/mp3" />
-        </audio>
+        </audio> */}
       </div>
 
       <div className="continue-btn">
