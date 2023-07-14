@@ -27,23 +27,23 @@ const page = () => {
       <div className="audio-player">
         <div className="audio-player__icons">
           <Image src="/previous-svgrepo-com.svg" width={30} height={30} className="icon icon--1"/>
-        <div className="play-pause">
-          
-            { isPlaying ?  (<Image
-              src="/play-1001-svgrepo-com.svg"
-              width={30}
-              height={30}
-              className="icon icon--2"
-              onClick = { handleClick } />) :
-            (<Image
-              src="/pause-1010-svgrepo-com.svg"
-              width={30}
-              height={30}
-              className="icon icon--3"
-              onClick = { handleClick }
-              />)
-            }
-        </div>
+          <div className="play-pause">
+            
+              { isPlaying ?  (<Image
+                src="/play-1001-svgrepo-com.svg"
+                width={30}
+                height={30}
+                className="icon icon--2"
+                onClick = { handleClick } />) :
+              (<Image
+                src="/pause-1010-svgrepo-com.svg"
+                width={30}
+                height={30}
+                className="icon icon--3"
+                onClick = { handleClick }
+                />)
+              }
+          </div>
           <Image src="/next-svgrepo-com.svg" width={30} height={30} className="icon icon--4" />
           <input type="range" name="progress time" id="progress" className="icon icon--progress"/>
         </div>

@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+  position: relative;
 
   .audio-header {
     color: $color-text-audio;
@@ -27,8 +28,7 @@
       min-width: 400px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      grid-gap: $margin-md;
+      grid-template-rows: repeat(3, auto);
       align-items: center;
       justify-items: center;
       margin-bottom: $margin-md;
@@ -62,16 +62,16 @@
         }
 
         &--progress {
-          grid-column: 2/3;
+          grid-column: 1/4;
           grid-row: 3/4;
           appearance: none;
           width: 100%;
-          height: 1rem;
-          background: $color-text-audio;
+          height: 0.5rem;
+          background: $color-default;
           border-radius: 0.5rem;
           outline: none;
           cursor: pointer;
-          
+          margin-top: 2rem;
         }
       }
     }
