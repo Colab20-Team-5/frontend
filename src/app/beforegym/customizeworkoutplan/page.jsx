@@ -20,20 +20,27 @@ const page = () => {
     setClickedDays([...clickedDays, dayId]);
   }
 
-  const handleChange = (e) => {
-    setText(e.target.value);
+  const handleChange = (e, dayId) => {
+    const updatedText = {
+      ...text,
+      [dayId]: e.target.value
+    }
+    setText(updatedText);
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e, dayId) => {
     e.preventDefault();
 
-    console.log(text);
   }
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = (e, dayId) => {
     if (e.keyCode === 13) {
       e.preventDefault();
-      setText(text + "\n");
+      const updatedText = {
+        ...text,
+        [dayId]: (text[dayId] || "") + "\n"
+      }
+      setText(updatedText);
     }
   }
   
@@ -61,14 +68,13 @@ const page = () => {
                   </button>
                 </div>
                 { ( isClicked && 
-                  <form onSubmit = { handleSubmit }>
+                  <form onSubmit = { (e) => handleSubmit(e, id) }>
                   <textarea name=""
                    id="" cols="36" 
                    rows="6" 
-                   onChange = { handleChange }
-                  value = { text }
-                  onKeyDown={handleKeyDown}
-
+                   onChange = { (e) => handleChange(e, id) }
+                  value = { text[id] || "" }
+                  onKeyDown={(e) => handleKeyDown(e, id)}
                     />
                   </form>
                 )}

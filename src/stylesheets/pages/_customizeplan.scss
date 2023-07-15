@@ -21,10 +21,7 @@
 }
 
 .day-container {
-  background-color: $color-background-card;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
+  background-color: #e3e2ee;
 
   button {
     font-size: $font-size-lg;
@@ -34,7 +31,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: $padding-xs;
+    justify-content: center;
+    width: 100%;
+    padding: $padding-md;
   }
   textarea {
     font-size: $font-size-lg;
