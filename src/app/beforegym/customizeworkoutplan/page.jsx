@@ -63,8 +63,8 @@ const page = () => {
                 { ( isClicked && 
                   <form onSubmit = { handleSubmit }>
                   <textarea name=""
-                   id="" cols="53" 
-                   rows="10" 
+                   id="" cols="36" 
+                   rows="6" 
                    onChange = { handleChange }
                   value = { text }
                   onKeyDown={handleKeyDown}
