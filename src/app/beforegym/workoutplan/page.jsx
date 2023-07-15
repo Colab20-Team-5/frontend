@@ -6,7 +6,7 @@ import PageButton from "@/app/components/PageButton";
 
 const page = () => {
   return (
-    <div>
+    <div className="workout-plan">
       <HeaderText
         headerText={"Journey to the Gym"}
         secondHeader={"Plan My Workout"}

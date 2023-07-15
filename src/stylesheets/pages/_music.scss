@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+  position: relative;
 
   .audio-header {
     color: $color-text-audio;
@@ -20,5 +21,88 @@
 
   .audio-player {
     margin-top: $margin-xl;
+    min-width: 100%;
+    height: 20rem;
+
+    audio {
+      display: none;
+    }
+
+    &__icons {
+      min-width: 400px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, auto);
+      align-items: center;
+      justify-items: center;
+      margin-bottom: $margin-md;
+
+      .play-pause {
+        border: 2px solid $color-text-audio;
+        border-radius: 50%;
+        width: 16rem;
+        height: 16rem;
+        grid-column: 1/4;
+        grid-row: 1/2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .icon {
+        font-size: $font-size-xxl;
+        color: $color-text-audio;
+        margin: 0 $margin-md;
+        cursor: pointer;
+
+        &--1 {
+         grid-column: 1/2;
+         grid-row: 2/3;
+        }
+
+        &--4 {
+          grid-column: 3/4;
+          grid-row: 2/3;
+        }
+
+        &--progress {
+          grid-column: 1/4;
+          grid-row: 3/4;
+          appearance: none;
+          width: 80%;
+          height: 0.5rem;
+          background: $color-default;
+          border-radius: 0.5rem;
+          outline: none;
+          cursor: pointer;
+          margin-top: 2rem;
+          box-shadow: $shadow-md;
+
+          &::-moz-range-thumb {
+            appearance: none;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: #ff9c06;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+
+          &::-webkit-slider-thumb {
+            appearance: none;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: #ff9c06;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+
+          &::-moz-range-progress {
+            background-color: $color-text-audio;
+            height: 0.5rem;
+            border-radius: 0.5rem;
+          }
+        }
+      }
+    }
   }
 }
