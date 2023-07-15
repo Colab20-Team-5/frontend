@@ -25,6 +25,7 @@
 
   button {
     font-size: $font-size-lg;
+    background-color: transparent;
   }
 
   form {
@@ -33,11 +34,15 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: $padding-md;
+    padding: $padding-sm $padding-sm $padding-md $padding-sm;
   }
   textarea {
-    font-size: $font-size-lg;
+    font-size: $font-size-sm;
     outline: none;
     border: none;
+    font-family: $font-family;
+    width: 100%;
+    padding: $padding-sm;
+    resize: none;
   }
 }

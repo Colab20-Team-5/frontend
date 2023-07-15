@@ -42,17 +42,16 @@
 
   &--sm {
     display: inline-block;
-    &:link, &:visited {
+    &:link,
+    &:visited {
       padding: $spacing-md $spacing-lg;
     }
   }
-
 
   &--white {
     background-color: $default-bg;
     color: $color-default;
   }
-
 
   &--nav {
     width: 100%;
@@ -69,6 +68,5 @@
 .continue-btn {
   position: absolute;
   right: 0;
-  bottom: -20rem;
-
+  // bottom: -20rem;
 }

@@ -1,23 +1,20 @@
 .about {
-    padding: $padding-md;
-    margin: $margin-md $margin-sm;
-    border-radius: $border-radius-sm;
-    display: flex;
-    flex-direction: column;
-    align-items: fl;
-    justify-content: center;
-    text-align: left;
+  padding: $padding-md $padding-md 0 $padding-md;
+  margin: $margin-md $margin-sm 0 $margin-sm;
+  border-radius: $border-radius-sm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
 
-    &__title {
-        margin-bottom: $margin-md;
-        letter-spacing: $letter-spacing-md;
-    }
+  &__title {
+    margin-bottom: $margin-md;
+    letter-spacing: $letter-spacing-md;
+  }
 
-    &__text {
-        font-size: $font-size-sm;
-        margin-bottom: $margin-md;
-        letter-spacing: $letter-spacing-md;
-        line-height: $line-height-sm;
-    }
-
+  &__text {
+    font-size: $font-size-sm;
+    margin-bottom: $margin-md;
+    line-height: $line-height-sm;
+  }
 }
