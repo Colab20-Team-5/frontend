@@ -11,6 +11,7 @@ const HomeNavButton = ({ text, url, imgUrl }) => {
         display: imgUrl && "flex",
         gap: imgUrl && "20px",
       }}
+      target="_blank"
     >
       <div className={`${imgUrl && "img-btn-container"}`}>
         {imgUrl && <Image src={imgUrl} alt="" width={30} height={30} />}

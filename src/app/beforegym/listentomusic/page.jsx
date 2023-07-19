@@ -13,20 +13,24 @@ const page = () => {
       />
 
       <div className="btn-container">
-        <HomeNavButton text={"Spotify"} url={"/"} imgUrl={"/spotify.svg"} />
+        <HomeNavButton
+          text={"Spotify"}
+          url={"https://open.spotify.com/"}
+          imgUrl={"/spotify.svg"}
+        />
         <HomeNavButton
           text={"Apple Music"}
-          url={"/"}
+          url={"https://music.apple.com/us/browse"}
           imgUrl={"/applemusic.svg"}
         />
         <HomeNavButton
           text={"Amazon Music"}
-          url={"/"}
+          url={"https://music.amazon.com/"}
           imgUrl={"/amazonmusic.svg"}
         />
         <HomeNavButton
           text={"Youtube Music"}
-          url={"/"}
+          url={"https://music.youtube.com/"}
           imgUrl={"/youtubemusic.svg"}
         />
       </div>

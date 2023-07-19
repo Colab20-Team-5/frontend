@@ -1,15 +1,22 @@
 "use client";
 import PageButton from "../../components/PageButton";
-import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
+import {
+  Autocomplete,
+  GoogleMap,
+  Marker,
+  useLoadScript,
+} from "@react-google-maps/api";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 
 const Page = () => {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "AIzaSyBNiwaexHioOYkyYdV3nBRKo07-D8CO94s", // Replace with your actual Google Maps API key
+    libraries: ["places"],
   });
 
   const [currentLocation, setCurrentLocation] = useState(null);
   const [selectedLocation, setSelectedLocation] = useState(null);
+  const [autocomplete, setAutocomplete] = useState(null);
 
   const mapContainerStyle = {
     width: "100%",
@@ -22,6 +29,18 @@ const Page = () => {
       lng: event.latLng.lng(),
     });
   }, []);
+
+  const handlePlaceSelect = () => {
+    const place = autocomplete.getPlace();
+    if (place.geometry) {
+      setSelectedLocation({
+        lat: place.geometry.location.lat(),
+        lng: place.geometry.location.lng(),
+      });
+    } else {
+      console.error("No location data available for the selected place.");
+    }
+  };
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -55,13 +74,28 @@ const Page = () => {
         <h1>Loading...</h1>
       ) : (
         <div className="map-container">
+          <h2 className="heading-secondary">Select your Gym location</h2>
           <GoogleMap
             mapContainerStyle={mapContainerStyle}
             style={{ width: "200px", height: "400px" }}
             center={currentLocation || undefined} // Set the currentLocation as the center if available
             zoom={10}
             onClick={handleMapClick}
+            options={{ disableDefaultUI: true }} // Add this options prop to disable the default UI controls
           >
+            <Autocomplete
+              onLoad={(autocomplete) => {
+                setAutocomplete(autocomplete);
+              }}
+              onPlaceChanged={handlePlaceSelect}
+            >
+              <input
+                type="text"
+                placeholder="Search for a location"
+                className="map-input"
+                style={{}}
+              />
+            </Autocomplete>
             {selectedLocation && (
               <Marker
                 position={selectedLocation}
@@ -82,6 +116,7 @@ const Page = () => {
             text={"Open in Google Maps"}
             url={`https://www.google.com/maps/search/?api=1&query=${selectedLocation.lat},${selectedLocation.lng}`}
             arrow={"/nextarrow.svg"}
+            newTab={true}
           />
         </div>
       )}
