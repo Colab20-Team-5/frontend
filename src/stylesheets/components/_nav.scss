@@ -1,0 +1,11 @@
+.nav {
+  padding: $spacing-md;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    font-size: $font-size-xl;
+    color: $color-default;
+  }
+}

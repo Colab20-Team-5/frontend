@@ -1,0 +1,48 @@
+.customize-plan-container {
+  margin: $margin-xl auto;
+  font-size: $font-size-md;
+
+  .day {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.1rem $padding-md;
+    background-color: $color-background-card;
+    margin: $margin-md auto;
+    font-weight: $font-weight-bold;
+    border-radius: $border-radius-sm;
+    cursor: pointer;
+    font-size: $font-size-sm;
+    width: 100%;
+  }
+}
+
+.main-container {
+  position: relative;
+}
+
+.day-container {
+  background-color: #e3e2ee;
+
+  button {
+    font-size: $font-size-lg;
+    background-color: transparent;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: $padding-sm $padding-sm $padding-md $padding-sm;
+  }
+  textarea {
+    font-size: $font-size-sm;
+    outline: none;
+    border: none;
+    font-family: $font-family;
+    width: 100%;
+    padding: $padding-sm;
+    resize: none;
+  }
+}

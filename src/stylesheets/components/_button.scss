@@ -1,0 +1,73 @@
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  margin: $margin-xl auto;
+}
+
+.btn {
+  display: flex;
+  color: $color-text-light;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+  background-color: $color-background-button;
+  text-transform: capitalize;
+  margin: $margin-sm auto;
+  justify-content: center;
+  align-items: center;
+
+  &:link,
+  &:visited {
+    display: inline-block;
+    border: none;
+    border-radius: $border-radius-md;
+    cursor: pointer;
+    text-decoration: none;
+    padding: $spacing-sm $spacing-md;
+    transition: all 0.2s;
+    position: relative;
+    font-size: $font-size-sm;
+  }
+
+  &--xl {
+    width: 100%;
+  }
+
+  &--lg {
+    width: 75%;
+  }
+
+  &--md {
+    width: 50%;
+  }
+
+  &--sm {
+    display: inline-block;
+    &:link,
+    &:visited {
+      padding: $spacing-md $spacing-lg;
+    }
+  }
+
+  &--white {
+    background-color: $default-bg;
+    color: $color-default;
+  }
+
+  &--nav {
+    width: 100%;
+  }
+
+  .img-btn-container {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    gap: 20px;
+  }
+}
+
+.continue-btn {
+  // position: absolute;
+  right: 0;
+  text-align: center;
+  // bottom: -20rem;
+}
