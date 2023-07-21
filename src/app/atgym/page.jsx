@@ -6,10 +6,10 @@ const page = () => {
   return (
     <div>
       <HeaderText
-        headerText={"Journey to the Gym"}
-        secondHeader={""}
+        headerText={"At the Gym"}
+        secondHeader={"You have made it to the gym!"}
         paraText={
-          "Congrats Alex on taking the initiative to plan your journey to the gym. Let’s get started!"
+          "Choose your workout to begin"
         }
       />
       <div className="btn-container">
