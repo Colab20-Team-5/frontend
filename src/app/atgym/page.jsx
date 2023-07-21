@@ -46,7 +46,7 @@ const page = () => {
        <div className="continue-btn">
         <PageButton
           text={"Map to Gym"}
-          url={"/beforegym/maptogym"}
+          url={"/atgym/dayofweek"}
           arrow={"/nextarrow.svg"}
         />
       </div>
