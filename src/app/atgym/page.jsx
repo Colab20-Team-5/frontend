@@ -12,8 +12,12 @@ const page = () => {
           "Choose your workout to begin"
         }
       />
-      <div className="btn-container">
-       
+       <div className="continue-btn">
+        <PageButton
+          text={"Map to Gym"}
+          url={"/beforegym/maptogym"}
+          arrow={"/nextarrow.svg"}
+        />
       </div>
     </div>
   );
