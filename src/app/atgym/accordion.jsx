@@ -27,7 +27,7 @@ const Accordion = ({ heading, contents, icons}) => {
                 </button>
               </div>
               {isClicked && (
-               <h1>hello</h1>
+               <div> {contents} </div>
               )}
             </div>
      
