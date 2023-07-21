@@ -5,7 +5,7 @@ import PageButton from "@/app/components/PageButton";
 import { weekDays } from "@/data";
 import Image from "next/image";
 
-const Accordion = () => {
+const Accordion = ({ heading, contents, icons}) => {
   const [clickedDays, setClickedDays] = useState([]);
   const [text, setText] = useState("");
   const [isClicked, setIsClicked] = useState(false);
@@ -21,15 +21,10 @@ const Accordion = () => {
         
             <div className="day-container">
               <div className="day" onClick={() => handleClick()}>
-                <p>Monday June 26th 2023</p>
+                <p>{heading}</p>
                 <button type="submit">
-                  <Image
-                    src="/down-arrow-backup-2-svgrepo-com.svg"
-                    width={30}
-                    height={30}
-                    className="icon icon--1"
-                />
-          </button>
+                  { icons }
+                </button>
               </div>
               {isClicked && (
                <h1>hello</h1>
