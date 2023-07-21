@@ -1,5 +1,6 @@
 import HeaderText from '@/app/components/HeaderText'
 import HomeNavButton from '@/app/components/HomeNavButton'
+import PageButton from '@/app/components/PageButton'
 import React from 'react'
 
 const page = () => {
@@ -35,6 +36,13 @@ const page = () => {
         />
       </div>
 
+      <div className="continue-btn">
+        <PageButton
+          text={"Map to Gym"}
+          url={"/atgym/dayofweek"}
+          arrow={"/nextarrow.svg"}
+        />
+      </div>
     </div>
   )
 }
