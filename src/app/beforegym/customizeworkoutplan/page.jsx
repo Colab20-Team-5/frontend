@@ -53,7 +53,7 @@ const page = () => {
         {weekDays.map(({ id, day }) => {
           const isClicked = clickedDays.includes(id);
           return (
-            <div className="day-container">
+            <div className="day-container" key={id}>
               <div className="day" key={id} onClick={() => handleClick(id)}>
                 <p>{day}</p>
                 <button type="submit">{isClicked ? "-" : "+"}</button>

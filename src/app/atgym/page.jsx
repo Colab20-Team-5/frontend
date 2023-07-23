@@ -11,20 +11,16 @@ const page = () => {
       <HeaderText
         headerText={"At the Gym"}
         secondHeader={"You have made it to the gym!"}
-        paraText={
-          "Choose your workout to begin"
-        }
+        paraText={"Choose your workout to begin"}
       />
       <Accordion
         heading={"Monday, June 26th, 2023"}
         contents={
           <>
-          <Link href="/atgym/monday">
-              <p>
-              Monday, June 26th, 2023
-              </p>
-          </Link>
-          <Link href="/atgym/monday">
+            <Link href="/atgym/weekdays">
+              <p>Monday, July 24th, 2023</p>
+            </Link>
+            {/* <Link href="/atgym/monday">
             <p>
             Monday, July 3rd, 2023
             </p>
@@ -38,18 +34,24 @@ const page = () => {
             <p>
               Monday, July 17th, 2023
             </p>
-          </Link>
+          </Link> */}
           </>
         }
-        icons={<Image src="/down-arrow-backup-2-svgrepo-com.svg" width={20} height={20} />}
-       />
-       <div className="continue-btn">
+        icons={
+          <Image
+            src="/down-arrow-backup-2-svgrepo-com.svg"
+            width={20}
+            height={20}
+          />
+        }
+      />
+      {/* <div className="continue-btn">
         <PageButton
           text={"Map to Gym"}
           url={"/atgym/dayofweek"}
           arrow={"/nextarrow.svg"}
         />
-      </div>
+      </div> */}
     </div>
   );
 };

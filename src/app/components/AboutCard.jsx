@@ -18,7 +18,7 @@ const AboutCard = () => {
         {cardDetails.map(({ im, title, description }, idx) => {
           return (
             <>
-              <div className="card">
+              <div className="card" key={idx}>
                 <Image src={im} alt="home nav icon" width={100} height={100} />
 
                 <div className="card__text-box">
