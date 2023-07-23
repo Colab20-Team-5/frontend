@@ -1,9 +1,10 @@
+"use client";
 import React from "react";
-import PageButton from "../components/PageButton";
 import HeaderText from "../components/HeaderText";
 import Accordion from "./accordion";
 import Image from "next/image";
 import Link from "next/link";
+import { getDataLS } from "@/utils";
 
 const page = () => {
   return (
@@ -14,11 +15,11 @@ const page = () => {
         paraText={"Choose your workout to begin"}
       />
       <Accordion
-        heading={"Monday, June 26th, 2023"}
+        heading={"Select"}
         contents={
           <>
             <Link href="/atgym/weekdays">
-              <p>Monday, July 24th, 2023</p>
+              <p className="select-week">{getDataLS("week")}</p>
             </Link>
             {/* <Link href="/atgym/monday">
             <p>

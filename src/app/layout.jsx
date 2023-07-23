@@ -1,4 +1,5 @@
 "use client";
+import { Toaster } from "react-hot-toast";
 import "../stylesheets/app.scss";
 import Navbar from "./components/Navbar";
 import Providers from "./components/Providers";
@@ -14,6 +15,16 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Providers>
+          <Toaster
+            position="top-right"
+            reverseOrder={false}
+            toastOptions={{
+              className: "",
+              style: {
+                fontSize: "14px",
+              },
+            }}
+          />
           <Navbar />
           <div>{children}</div>
           <ProgressBar

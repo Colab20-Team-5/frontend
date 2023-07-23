@@ -1,8 +1,12 @@
+"use client";
 import HeaderText from "@/app/components/HeaderText";
 import PageButton from "@/app/components/PageButton";
+import { getDataLS } from "@/utils";
 import React from "react";
 
 const page = () => {
+  const workoutDays = JSON.parse(getDataLS("workoutPlan")).days;
+
   return (
     <div>
       <HeaderText
@@ -11,10 +15,12 @@ const page = () => {
       />
       <p className="paragraph">Monday, July 24th, 2023</p>
       <div className="btn-container">
-        <PageButton text={"Monday"} url={"/atgym/warmup"} />
-        <PageButton text={"Tuesday"} url={"/atgym/weekday"} />
+        {workoutDays?.map((day) => {
+          return <PageButton text={day} url={`/atgym/${day}`} />;
+        })}
+        {/* <PageButton text={"Tuesday"} url={"/atgym/weekday"} />
         <PageButton text={"Thursday"} url={"/atgym/weekday"} />
-        <PageButton text={"Friday"} url={"/atgym/weekday"} />
+        <PageButton text={"Friday"} url={"/atgym/weekday"} /> */}
       </div>
     </div>
   );
