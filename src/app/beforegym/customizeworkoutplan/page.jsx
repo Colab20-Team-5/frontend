@@ -9,7 +9,7 @@ import { toast } from "react-hot-toast";
 
 const page = () => {
   const [clickedDays, setClickedDays] = useState([]);
-  const [text, setText] = useState("");
+  const [text, setText] = useState(JSON.parse(getDataLS("daysPlan")));
 
   const handleClick = (dayId) => {
     if (clickedDays.includes(dayId)) {
@@ -91,7 +91,7 @@ const page = () => {
           <div
             className="continue-btn"
             onClick={() => {
-              if (Object.keys(isDaySaved).length === workoutData.days.length) {
+              if (Object.keys(text).length === workoutData.days.length) {
                 localStorage.setItem("daysPlan", JSON.stringify(text));
                 router.push("/beforegym/maptogym");
               } else {

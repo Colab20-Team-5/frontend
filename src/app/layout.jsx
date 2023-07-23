@@ -5,10 +5,10 @@ import Navbar from "./components/Navbar";
 import Providers from "./components/Providers";
 import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 
-export const metadata = {
-  title: "BeFit",
-  description: "",
-};
+// export const metadata = {
+//   title: "BeFit",
+//   description: "",
+// };
 
 export default function RootLayout({ children }) {
   return (
