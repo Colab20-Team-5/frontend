@@ -1,6 +1,6 @@
 import "../stylesheets/app.scss";
-import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import Providers from "./components/Providers";
 
 export const metadata = {
   title: "BeFit",
@@ -11,8 +11,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        <div>{children}</div>
+        <Providers>
+          <Navbar />
+          <div>{children}</div>
+        </Providers>
       </body>
     </html>
   );

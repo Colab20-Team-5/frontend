@@ -8,4 +8,32 @@
     font-size: $font-size-xl;
     color: $color-default;
   }
+
+  .user-img {
+    border-radius: 9999px;
+  }
+
+  .logout-img {
+    cursor: pointer;
+  }
+
+  .loader-img {
+    border-radius: 9999px;
+    background-color: #ccc;
+    width: 45px;
+    height: 45px;
+    position: relative;
+    animation: skeleton-loader 1s infinite alternate;
+  }
+
+  @keyframes skeleton-loader {
+    0% {
+      opacity: 0.8;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0.4;
+      transform: scale(1);
+    }
+  }
 }
