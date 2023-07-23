@@ -3,7 +3,7 @@ import PageButton from "@/app/components/PageButton";
 import React, { useState } from "react";
 
 const page = () => {
-  const [isWorkoutDone, setIsWorkoutDone] = useState(true);
+  const [isWorkoutDone, setIsWorkoutDone] = useState(false);
 
   return (
     <>

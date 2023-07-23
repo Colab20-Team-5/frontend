@@ -4,6 +4,7 @@ import PageButton from "@/app/components/PageButton";
 import HeaderText from "../../components/HeaderText";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import dayjs from "dayjs";
 
 const page = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -41,7 +42,7 @@ const page = () => {
         }
       />
       <div className="audio-header">
-        <p>5 July 2023</p>
+        <p>{dayjs().format("dddd, DD/MMMM/YYYY")}</p>
         <h3>Pre-Workout Guide</h3>
         <p>Motivational Workout</p>
       </div>

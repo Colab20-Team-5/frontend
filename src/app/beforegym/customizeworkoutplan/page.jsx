@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import HeaderText from "../../components/HeaderText";
-import PageButton from "@/app/components/PageButton";
 import { getDataLS } from "@/utils";
 import { useRouter } from "next/navigation";
 import SaveButton from "@/app/components/SaveButton";
@@ -9,7 +8,9 @@ import { toast } from "react-hot-toast";
 
 const page = () => {
   const [clickedDays, setClickedDays] = useState([]);
-  const [text, setText] = useState(JSON.parse(getDataLS("daysPlan")));
+  const [text, setText] = useState(JSON.parse(getDataLS("daysPlan")) || "");
+
+  console.log(text);
 
   const handleClick = (dayId) => {
     if (clickedDays.includes(dayId)) {
@@ -43,7 +44,6 @@ const page = () => {
       router.push("/beforegym/workoutplan");
     }
   }, [workoutData]);
-  console.log(isDaySaved);
 
   return (
     <>
