@@ -1,7 +1,6 @@
 import React from "react";
 import PageButton from "../components/PageButton";
 import HeaderText from "../components/HeaderText";
-import { useSession } from "next-auth/react";
 import { getServerSession } from "next-auth";
 import { options } from "../api/auth/[...nextauth]/options";
 

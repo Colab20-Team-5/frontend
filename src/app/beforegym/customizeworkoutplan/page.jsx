@@ -8,9 +8,20 @@ import { toast } from "react-hot-toast";
 
 const page = () => {
   const [clickedDays, setClickedDays] = useState([]);
-  const [text, setText] = useState(JSON.parse(getDataLS("daysPlan")) || "");
+  const [text, setText] = useState(null);
+  const [workoutData, setWorkoutData] = useState(null);
+  const router = useRouter();
 
-  console.log(text);
+  useEffect(() => {
+    setWorkoutData(JSON.parse(getDataLS("workoutPlan")) || "");
+    setText(JSON.parse(getDataLS("daysPlan")) || "");
+  }, []);
+
+  useEffect(() => {
+    if (workoutData !== null && workoutData === "") {
+      router.push("/beforegym/workoutplan");
+    }
+  }, [workoutData]);
 
   const handleClick = (dayId) => {
     if (clickedDays.includes(dayId)) {
@@ -36,18 +47,9 @@ const page = () => {
     setIsDaySaved({ ...isDaySaved, [day]: true });
   };
 
-  const workoutData = JSON.parse(getDataLS("workoutPlan"));
-  const router = useRouter();
-
-  useEffect(() => {
-    if (!workoutData) {
-      router.push("/beforegym/workoutplan");
-    }
-  }, [workoutData]);
-
   return (
     <>
-      {workoutData && (
+      {workoutData && text !== null && (
         <div className="main-container">
           <HeaderText
             headerText={"Journey to the Gym"}

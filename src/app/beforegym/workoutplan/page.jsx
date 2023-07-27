@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HeaderText from "../../components/HeaderText";
 import Question from "./components/Question";
 import { questionsData } from "../../../data/index";
@@ -18,78 +18,89 @@ const page = () => {
     muscles: [],
   });
 
-  const storedWorkouts = getDataLS("workoutPlan");
+  const [storedWorkouts, setStoredWorkouts] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setStoredWorkouts(getDataLS("workoutPlan"));
+    setIsLoading(false);
+  }, []);
 
   return (
-    <div className="workout-plan">
-      {storedWorkouts ? (
-        <div style={{ marginTop: "12rem" }}>
-          <p className="paragraph">
-            You have already created workout plan for this week.
-            <br />
-            {getDataLS("week")} -{" "}
-            {dayjs(getDataLS("nextweek")).format("dddd, DD/MMMM/YYYY")}
-          </p>
-          <div className="continue-btn">
-            <PageButton
-              url={"/beforegym/customizeworkoutplan"}
-              text={"Continue"}
-              arrow={"/nextarrow.svg"}
-            />
-          </div>
-        </div>
+    <>
+      {isLoading ? (
+        <div className="paragraph">Loading...</div>
       ) : (
-        <>
-          <HeaderText
-            headerText={"Journey to the Gym"}
-            secondHeader={"Plan My Workout"}
-            paraText={
-              "Answer these questions to customize your workout goals for this week."
-            }
-          />
-          <div className="question-container">
-            {questionsData.map(({ text, options, type }, idx) => {
-              return (
-                <Question
-                  questionText={`${idx + 1}. ${text}`}
-                  options={options}
-                  setWorkoutPlan={setWorkoutPlan}
-                  workoutPlan={workoutPlan}
-                  type={type}
-                  key={idx}
+        <div className="workout-plan">
+          {storedWorkouts !== null ? (
+            <div style={{ marginTop: "12rem" }}>
+              <p className="paragraph">
+                You have already created workout plan for this week.
+                <br />
+                {getDataLS("week")} -{" "}
+                {dayjs(getDataLS("nextweek")).format("dddd, DD/MMMM/YYYY")}
+              </p>
+              <div className="continue-btn">
+                <PageButton
+                  url={"/beforegym/customizeworkoutplan"}
+                  text={"Continue"}
+                  arrow={"/nextarrow.svg"}
                 />
-              );
-            })}
-          </div>
+              </div>
+            </div>
+          ) : (
+            <>
+              <HeaderText
+                headerText={"Journey to the Gym"}
+                secondHeader={"Plan My Workout"}
+                paraText={
+                  "Answer these questions to customize your workout goals for this week."
+                }
+              />
+              <div className="question-container">
+                {questionsData.map(({ text, options, type }, idx) => {
+                  return (
+                    <Question
+                      questionText={`${idx + 1}. ${text}`}
+                      options={options}
+                      setWorkoutPlan={setWorkoutPlan}
+                      workoutPlan={workoutPlan}
+                      type={type}
+                      key={idx}
+                    />
+                  );
+                })}
+              </div>
 
-          <div
-            className="continue-btn"
-            onClick={() => {
-              if (
-                workoutPlan.days.length &&
-                workoutPlan.muscles.length &&
-                workoutPlan.time.length
-              ) {
-                localStorage.setItem(
-                  "workoutPlan",
-                  JSON.stringify(workoutPlan)
-                );
-                localStorage.setItem(
-                  "week",
-                  dayjs().format("dddd, DD/MMMM/YYYY")
-                );
-                localStorage.setItem("nextweek", nextWeek());
-                router.push("/beforegym/customizeworkoutplan");
-              } else {
-                toast.error("Please select some options.");
-              }
-            }}
-          >
-            <SaveButton text={"Continue"} />
-          </div>
-        </>
+              <div
+                className="continue-btn"
+                onClick={() => {
+                  if (
+                    workoutPlan.days.length &&
+                    workoutPlan.muscles.length &&
+                    workoutPlan.time.length
+                  ) {
+                    localStorage.setItem(
+                      "workoutPlan",
+                      JSON.stringify(workoutPlan)
+                    );
+                    localStorage.setItem(
+                      "week",
+                      dayjs().format("dddd, DD/MMMM/YYYY")
+                    );
+                    localStorage.setItem("nextweek", nextWeek());
+                    router.push("/beforegym/customizeworkoutplan");
+                  } else {
+                    toast.error("Please select some options.");
+                  }
+                }}
+              >
+                <SaveButton text={"Continue"} />
+              </div>
+            </>
+          )}
+        </div>
       )}
-    </div>
+    </>
   );
 };
 

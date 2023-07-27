@@ -39,7 +39,7 @@ const page = ({ params }) => {
             <PageButton
               text={"Warmup Completed"}
               arrow={"/nextarrow.svg"}
-              url={"/atgym/workout"}
+              url={`/atgym/workout/${params.day}`}
             />
           </div>
         </div>

@@ -1,9 +1,12 @@
 "use client";
 import PageButton from "@/app/components/PageButton";
+import { getDataLS, getNextDay } from "@/utils";
+import dayjs from "dayjs";
 import React, { useState } from "react";
 
-const page = () => {
+const page = ({ params }) => {
   const [isWorkoutDone, setIsWorkoutDone] = useState(false);
+  const nextDay = getNextDay(getDataLS("week"), params.day);
 
   return (
     <>
@@ -18,7 +21,11 @@ const page = () => {
         </div>
       ) : (
         <div className="exercise">
-          <p className="day-header">Monday, July 24th, 2023</p>
+          <p className="day-header">
+            {dayjs(nextDay).format("dddd, DD/MMMM/YYYY") === "Invalid Date"
+              ? "Loading..."
+              : dayjs(nextDay).format("dddd, DD/MMMM/YYYY")}
+          </p>
           <div>
             <p className="muscle-header">Leg Day - Workout</p>
             <p className="paragraph">
