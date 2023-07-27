@@ -28,6 +28,16 @@
     background-color: transparent;
   }
 
+  .btn-enter {
+    background-color: black;
+    font-size: $font-size-sm;
+    color: white;
+    padding: $padding-sm;
+    position: absolute;
+    bottom: 25px;
+    right: 15px;
+  }
+
   form {
     display: flex;
     flex-direction: column;
@@ -45,4 +55,13 @@
     padding: $padding-sm;
     resize: none;
   }
+
+  .day-data {
+    padding: $padding-md;
+  }
+}
+
+.select-week {
+  padding: $padding-sm;
+  color: black;
 }

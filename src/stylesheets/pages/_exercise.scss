@@ -1,0 +1,26 @@
+.exercise {
+  .day-header {
+    font-size: $font-size-md;
+    font-weight: 700;
+  }
+
+  .muscle-header {
+    font-size: $font-size-lg;
+    font-weight: 700;
+    margin: $margin-lg 0;
+  }
+
+  .exercise-header {
+    font-size: $font-size-md;
+    margin: $margin-xs 0;
+  }
+
+  .exercise-desc {
+    margin-left: $margin-sm;
+  }
+}
+
+.workout-done {
+  font-size: $font-size-md;
+  margin-top: 12rem;
+}

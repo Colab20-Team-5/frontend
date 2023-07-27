@@ -1,12 +1,27 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HeaderText from "../../components/HeaderText";
-import PageButton from "@/app/components/PageButton";
-import { weekDays } from "@/data";
+import { getDataLS } from "@/utils";
+import { useRouter } from "next/navigation";
+import SaveButton from "@/app/components/SaveButton";
+import { toast } from "react-hot-toast";
 
 const page = () => {
   const [clickedDays, setClickedDays] = useState([]);
-  const [text, setText] = useState("");
+  const [text, setText] = useState(null);
+  const [workoutData, setWorkoutData] = useState(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    setWorkoutData(JSON.parse(getDataLS("workoutPlan")) || "");
+    setText(JSON.parse(getDataLS("daysPlan")) || "");
+  }, []);
+
+  useEffect(() => {
+    if (workoutData !== null && workoutData === "") {
+      router.push("/beforegym/workoutplan");
+    }
+  }, [workoutData]);
 
   const handleClick = (dayId) => {
     if (clickedDays.includes(dayId)) {
@@ -18,72 +33,84 @@ const page = () => {
     setClickedDays([...clickedDays, dayId]);
   };
 
-  const handleChange = (e, dayId) => {
+  const handleChange = (e, day) => {
     const updatedText = {
       ...text,
-      [dayId]: e.target.value,
+      [day]: e.target.value,
     };
     setText(updatedText);
   };
 
-  const handleSubmit = (e, dayId) => {
+  const [isDaySaved, setIsDaySaved] = useState({});
+  const handleSubmit = (e, day) => {
     e.preventDefault();
-  };
-
-  const handleKeyDown = (e, dayId) => {
-    if (e.keyCode === 13) {
-      e.preventDefault();
-      const updatedText = {
-        ...text,
-        [dayId]: (text[dayId] || "") + "\n",
-      };
-      setText(updatedText);
-    }
+    setIsDaySaved({ ...isDaySaved, [day]: true });
   };
 
   return (
-    <div className="main-container">
-      <HeaderText
-        headerText={"Journey to the Gym"}
-        secondHeader={"Plan My Workout"}
-        paraText={"Customize your 45 minute workouts. "}
-      />
+    <>
+      {workoutData && text !== null && (
+        <div className="main-container">
+          <HeaderText
+            headerText={"Journey to the Gym"}
+            secondHeader={"Plan My Workout"}
+            paraText={`Customize your ${workoutData?.time[0]} workout.`}
+          />
 
-      <div className="customize-plan-container">
-        {weekDays.map(({ id, day }) => {
-          const isClicked = clickedDays.includes(id);
-          return (
-            <div className="day-container">
-              <div className="day" key={id} onClick={() => handleClick(id)}>
-                <p>{day}</p>
-                <button type="submit">{isClicked ? "-" : "+"}</button>
-              </div>
-              {isClicked && (
-                <form onSubmit={(e) => handleSubmit(e, id)}>
-                  <textarea
-                    name=""
-                    id=""
-                    cols="30"
-                    rows="6"
-                    onChange={(e) => handleChange(e, id)}
-                    value={text[id] || ""}
-                    onKeyDown={(e) => handleKeyDown(e, id)}
-                  />
-                </form>
-              )}
-            </div>
-          );
-        })}
-      </div>
+          <div className="customize-plan-container">
+            {workoutData?.days.map((day, id) => {
+              const isClicked = clickedDays.includes(id);
+              return (
+                <div className="day-container" key={id}>
+                  <div className="day" key={id} onClick={() => handleClick(id)}>
+                    <p>{day}</p>
+                    <button type="submit">{isClicked ? "-" : "+"}</button>
+                  </div>
+                  {!isDaySaved[day] && isClicked && (
+                    <form
+                      onSubmit={(e) => handleSubmit(e, day)}
+                      style={{ position: "relative" }}
+                    >
+                      <textarea
+                        name=""
+                        id=""
+                        cols="30"
+                        rows="6"
+                        onChange={(e) => handleChange(e, day)}
+                        value={text[day] || ""}
+                      />
+                      <button className="btn-enter">Enter</button>
+                    </form>
+                  )}
+                  {isDaySaved[day] && (
+                    <div className="day-data">{text[day]}</div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
 
-      <div className="continue-btn">
-        <PageButton
-          text={"Map to Gym"}
-          url={"/beforegym/maptogym"}
-          arrow={"/nextarrow.svg"}
-        />
-      </div>
-    </div>
+          <div
+            className="continue-btn"
+            onClick={() => {
+              if (Object.keys(isDaySaved).length === workoutData.days.length) {
+                localStorage.setItem("daysPlan", JSON.stringify(text));
+                router.push("/beforegym/maptogym");
+              } else {
+                toast.error("Please create your workout plan.");
+              }
+            }}
+          >
+            {/* <PageButton
+              text={"Map to Gym"}
+              url={"/beforegym/maptogym"}
+              arrow={"/nextarrow.svg"}
+            /> */}
+            <SaveButton text={"Map to Gym"} />
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

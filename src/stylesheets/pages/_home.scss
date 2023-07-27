@@ -41,3 +41,11 @@
 .workout-plan {
   position: relative;
 }
+
+@media only screen and (min-width: 820px) {
+  .section-hero {
+    &__text-box {
+      width: 350px;
+    }
+  }
+}

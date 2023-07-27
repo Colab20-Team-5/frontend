@@ -120,6 +120,14 @@ const Page = () => {
           />
         </div>
       )}
+
+      <div className="continue-btn">
+        <PageButton
+          text={"Guided Audio"}
+          url="/beforegym/guidedaudio"
+          arrow={"/nextarrow.svg"}
+        />
+      </div>
     </div>
   );
 };
