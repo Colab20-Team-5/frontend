@@ -1,5 +1,6 @@
 "use client";
 import PageButton from "@/app/components/PageButton";
+import SaveButton from "@/app/components/SaveButton";
 import { getDataLS, getNextDay } from "@/utils";
 import dayjs from "dayjs";
 import React, { useState } from "react";
@@ -53,10 +54,10 @@ const page = ({ params }) => {
               setIsWorkoutDone(true);
             }}
           >
-            <PageButton
+            <SaveButton
               text={"Workout Completed"}
               arrow={"/nextarrow.svg"}
-              url={"/atgym/workout"}
+              // url={"/atgym/workout/"}
             />
           </div>
         </div>
